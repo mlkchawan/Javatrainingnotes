@@ -1,0 +1,108 @@
+table = means entity
+tuble =means  "rows"
+
+===============================   Day 13          =========================================
+
+Exam syllabus:
+
+>>   Program on java Pojo 
+>>   Mysql 5/6 -- Queries
+>>   Log4j intergtration
+
+>>  Write a java program to display a calender and date
+>>  Write  a  decimal
+>>    can i rollback a droped table from database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                           SQL 
+>>   Mysql is a not independent platform.it is database dependent.
+>>   Mysql is avaiilable in two modes : community version and Enterprises Version 
+>>   Mysql is a consists of table.and table is collection of rows and columns 
+>>   Every "row" in table will have column and row .Both are called as "Psuedo".
+
+
+                                  DBS Responsiblities
+
+>>   Schema creation and required creation 
+>>   Administration tasks
+>>   Backup of data on daily basis
+>     Restore the data on failure
+>>   He should know how to use db tools effectively
+>>   Security
+>>   User creation and privilages to the team should be dba.
+>>   Involve the desgining of db for everyone
+>>   Maintaince of db
+>>   Performance tuning
+>>   Debugging 
+>>   If any issues occur , he should be focus on root causes.
+>>   Report generation of about db utilization ( Data Analytics)
+======================================================================================
+
+>>  Mysql works on all Languages.
+>> Mysql  database table provides 4Gb storage as a default ,but can be extedned upto 8TB.
+>>  innoDB is a default ---for Mysql versio above 5.5 then these eror will appear
+
+>> MyISAM error means-- comes for older versions of mysql
+
+======================================================================================.
+ Basically developers who is in to Product team uses:
+
+>> BDD ---Behaviorual Driven Development (understand logic then write code)
+>> TDD --- Test Driven Development  (write code and test ,then develop quality code)
+------------------------------------------------------------------------------
+                                                    Database MODELS
+>>  Distrubuted database model
+>> Centralized  database model
+>> Auto scalling is also available in database.
+>>  
+======================================================================================.
+                                        Integrity Constraints:
+
+>>  Primary key : 
+>> composite primary key : combination of 2 values
+>> NOT NULL contraint will not work in below 80 versions
+
+
+		DATA INTEGRITY :
+ follow:-
+1 .Entity integrity ---duplicate 
+2. Domain  ----------store data in correct fromat
+3. Referiential --------- cant delete records that effect other
+4.User defined   ---------
+
+NOTE : Dont alter the table/db after inserting the data or if data exist in table 
+	 
+Syntax : For creating a table 
+
+<create table <tablename> 
+
+system cls; for clearing screen on command       
+
+>> Never use * while dispalying table in mysql 
+------------------------------------------------------------------------------
+>> .. input ===============  output
+ >> 0000000-------------1
+ >>  00102 ---------------102
+ >>  00000000------------0
+
+>> Mysql provides
+======================================================================================.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions of Mysql     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For renaming the table name 
+>>> Syntax: alter table <old tablename>  rename <new tablename>
+>>> removing records from the table:: truncate table < table name>
+>>> to delete entire table : we use :: drop table <tablename>
+>>>  desc table <
+>>> Every database has will have 2 types of bins
+>>> Recycle bin / purgebin
+>>>For creating user name : create user "username" @local host; 
+>>> 
+
+
+
+
+
+,
+
+
+
+

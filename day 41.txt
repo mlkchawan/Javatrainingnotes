@@ -1,0 +1,107 @@
+=====================    day 41  =======================
+
+Syntax :  
+
+class < classname>
+{
+ consttructor() ===name custructor should be mentioned ()
+{
+}
+function body 
+}
+}
+=======================================================
+
+		OOPS JS:
+
+>>   A class can have only one construtor.
+
+>>   Json uses  Syntax key value Pair.
+
+>>   ES6 dosnt not support multiple threading
+
+>>   JAVA has Maven  ----------has ---pom.xml
+>>   Npm (node) -------fo JS----- package .json
+>>   Node package manager 
+
+Typescript  configuration file   -----tsconfig.json
+======================================================
+
+Anything with .prototype then it is called prototype java Script
+
+JAVA SCRIPTS TYPES ARE :::
+
+
+1....Functional java script  ----------loops,conditional etc
+
+2....oops java script ------------object oriented 
+
+3.....prototype  js    ------------ prototype js is used by evry browser
+
+
+
+
+var <viableemean> =
+,funtionname ()
+{
+
+{
+
+=======================================================
+
+		AJAX 
+Browser ---internet---------server--------internet--------browser
+
+>> Ajax is used to make the Asynchronous communication.
+>>  from front end ---you want to pull data from backend
+>> for consuming web services  asynchrously 
+>>  React + Ajax 
+      React + PROMISE
+=======================================================
+                STEPS INVOLVED IN AJAX OPERATION
+
+>> 1.Event should be created either by selction or by clicking by abutton 
+
+2.create an  Xml http request object
+
+3.session should be created with server
+
+4. Once the connection is established send the request object to server
+
+5. once server recei ves the data, it will be process it and then gives the output to the broswer.
+====================
+>>      Ajax will read data from url provided by developer or end user
+
+>> using ajax we need to perform necessay transformation and consume the same and display it on browser.
+
+>>    Different browser will have different request objects ....IE--ACtivexObject
+=======================================================
+
+		
+
+in JAVA SCRIPT NOORDERS ARE MANDOTAORY TO WRITE PROGRAM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

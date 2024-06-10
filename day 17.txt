@@ -1,0 +1,66 @@
+Path are Two types :
+
+1. loaction of files from rrot is called absolute path ex:C/D drive/java-backend
+2. location extended from the absolute path
+
+===========================  Day 17 ============================ ??
+We are giving inputs through xml and in pojo we are having setters and getters  ===== these is only for primirive data means ( static inputs)
+
+==>>  List Map amp  === collections are dealt through springs
+==>>  singleton is a scope 
+==>> 
+
+Steps to create maven project :
+
+[setting.xml files
+ proxy information
+ commom dependencies informati
+ corporate repo info:Ip address,portno,username,pssword
+ plugins etc ]
+
+>> create a maven project
+>> Add spring dependencies
+>> clean install the maven project nder goals: clean install{everytime}
+>> Create a new java package and java beans class
+>> create a applicationcontent.xml file under src/resources
+>> fill the xml file as per the requirements
+>> < bean id="abb" class="">
+< property name ="aa" value=22/>
+</bean>
+>> create a test class or main class
+>> initiate IOC container in main class using " ClassPAthxmlApplicationcontext"
+>> get the bean and call the required getter methods  
+>> container should be shoutdowned for which we are caling "shutdownhook"
+
+
+>> whenever ioc goes shutdwon it will never go forced shutdown when we using shutdownhook
+ >> it will clean up the resources in progress/release the memory
+  >> through context we are caling the shutdown methods
+
+
+>> In maven when we want to give dynamic values we give ${key}
+>> 
+
+=============================================================
+
+>>  Create a project (we can create in two types quickstart[create dessktop],webapp [creates web app])
+>>  "scaffolding" the process of creating the project based on requirements.
+>>  when we creating project on basis of scaffolding we need to follow rules 
+>>
+================================================================
+>> goals : in maven 
+1 clean 
+2 install
+3  command  
+
+>> surefire.test
+
+
+
+MAVEN_HOME
+
+
+
+
+
+

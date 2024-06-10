@@ -1,0 +1,50 @@
+
+1} check  dependencies in packaege.json ====check { can be added in two ways through cli or in json directly
+
+2} check if you want any images in public folder
+
+3} create folder as you want name
+
+4} inside the component flolder create files 
+
+=======================================================
+                            COMPONENT LIFE CYCLE :
+
+	           COMPONENT DID REACT 
+	     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Initialization ===>>  Mounting ====>>Updation====>> Unmounting
+
+>> 
+
+>> All methods get over ride in the progress
+
+>> render == 
+
+>> Mount == will display on the browser {these process wil only one time}
+
+>> Unmount ===  removing the memory {these process wil only one time}
+
+>> Update == can be done any number of time 
+
+>> 
+======================================================
+		REACT REF 
+
+>>   React.createRef()
+
+>>   instead of document.getElementbyname (): ====>> we write React.createRef();
+
+>> using these no of lines of code reduces 
+
+>>  
+
+=======================================================
+
+Axios is third party library for API between 
+
+
+
+
+
+

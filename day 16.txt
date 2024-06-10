@@ -1,0 +1,107 @@
+https://mvnrepository.com/   ===>> { Link for Maven repository }
+
+
+###    maven error clearance:
+org.apache.maven.plugins:maven-resources-plugin:2.6 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-resources-plugin:jar:2.6
+Plugin org.apache.maven.plugins:maven-resources-plugin:2.6
+when we see plugin w.6 error 
+we have to follow:
+right click on the project (MavenExample)
+select the Maven > update > force update  
+- to clear the error.
+= 
+ ###compiler error
+ >window prefernces
+ > searched install jres
+> select  jDK 1.8.2
+> the ok 
+ 
+>>  In eclipse maven is inbuilt
+>>  By default when we create project in maven it will create a local repository its name is ".m2"
+>>  Maven has 2 types of files
+ 1.pom.xml
+ 2. settings.xml
+ 
+ >> Repos of 3 types
+ 1. local
+ 2. Corporate  === more secure
+ 3. public  == not secure
+ 
+ Pojo == ?
+ DAo  == ?
+ JDBC/HIBERNATE ==  ?
+ REACT JS == ?
+ 
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                Spring
+								
+ >> older software is EJB is used== only for banking apppl
+corba---->EJB ----> Spring 
+SNAPSHOT version means == they were in develpment phase/testing
+What is Spring ? 
+its a collection of tools , modules etc.
+
+Spring core - should be clear in these
+1 constructor
+2 Functions
+3 dependency injection 
+4 Configuration >> we need to know >> Annotation,XML Json,JAva class,properties..
+>>  Contructor can be called by creating object
+
+                    ANNOTATIONs
+before :
+xml is used for parsing and it used take  more time and these empact the performance.
+
+After servelt version 3.0 and  came annotations are began to use  
+It was released in jdk 1.5 version
+Symbol ="@"
+TYpes of annotations 
+1 predefinded 
+2 userdefined === 1. Compile 2.runtime
+>> using annoatations avoid huge code writing for xml files	
+Advantageses:
+	
+>> readability increase by using the annotations
+>> @webservlet
+          Disadvantages :
+>> codelength.
+
+          DEPENDENCY injection
+uses 
+1. xml 
+2. java basdd configurautions	
+3. Annotations
+
+Dependecy Injections 
+
+    XML
+>> Java injecton	;
+>> java class based configurations 
+>>  Dependency Injection container 
+>> LIfe cycle ---life cycle methods for this we need to download spring dependencies 
+>> IOC Container - inversion of control container 
+
+>> main [ config files,class,dependent classes,IOC Container]
+
+====================
+
+TO achieve the loose coupling  we will inject dependencies to the classes using ioc container
+
+to pass the values to class level variables through  contructor and functions
+
+>> In Spring we use  name of the configuration file is "applicationcontext.xml"
+>> <?xml version="1.0" encoding="UTF-8"?> is called as prolog
+>> in majority of xml filess we will have dtd.DTD format for document type defination
+>> in pojo class will have properties and we need to create setters and getters 
+> via config files we are going to push the data
+
+steps:
+
+>>. create a Maven project without arch type
+>>  create a package and create a bean class with required properties 
+>>  Create a xml file in 'SRC/resource' FOLDER
+>> create a java main class to test the dependdncy injection 
+>> clean the build to project
+>> Run the java main class
+
+>>LOC OR IOC error		  delete .m2 file						

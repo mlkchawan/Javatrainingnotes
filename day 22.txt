@@ -1,0 +1,36 @@
+exploer  {  Free marker ,velocity  }
+explore apache poi --for updating/deleting/
+Constraint validators  are from javax package 
+==================
+Day  22 
+
+======================        Spring Jdbc    =========================================
+
+>> SpringCore ----->> prequistics we need both   spring core,Connection pooling, 
+
+>> Spring +MVC + Spring JDBC
+
+>> In coming days we need to configure all these below technologies 
+
+>> Spring Mvc + Hibernate +jUNIt+ Log4j
+
+>> Spring MVC + Hibernate +jsp+ConnectionPooling
+
+>> SpringBoot +Hibernate
+
+>> SpringBoot + THYleaf + Hibernate
+
+>> Spring MVC + THYleaf + Hibernate +J unit +Log4j
+
+==================================================================================
+
+                                                      SPRING JDBC 
+>> To Work on spring 
+
+>>  RowMapper is used to display the data is similar to resultset  
+
+>>  Validations are of 3 types 
+1. client side  -----js,html5
+2. Server Side -------
+3. db level validation 
+4.  server level validation

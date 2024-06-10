@@ -1,0 +1,171 @@
+
+=====================  day 44  ===========================
+
+		 WEB PACK ::
+
+
+>> In React web pack will do packaging of your project 
+
+>> Local host is not allowed in the projects 
+
+>> Package .JSON is similar like pom .xml in Maven
+
+>>  npm repository is same like the maven repository
+
+>>npm update--used for --------clean install like maven{ just like we do in maven } 
+
+
+GIthub commands 
+giot init
+git add*
+git commit -m "gfdrfedws"
+
+>> Node Modules : Are folder which show dependencies added in the project
+
+>> IN Java dependencies are will bein jar format 
+
+>>   IN react depencieas are will be in modeules format
+
+>>   In java  3rd party dependecies will be in "jar" format
+
+>>   In JavaScript /frontend when wnat to use anu 3rd roproperty libarries then we need to include that libarary will be in the code using Script tag.
+
+<script src="/>
+
+>> libararies willl bein  .js format
+
+>> in Javascript to include any 3rd party libarries we can use 2 types 
+1. Minimized Version  { popper.min.js}  ,less memory  (recommended verion)
+2. Normal Version        { popper.js } , will occupy more memory
+
+>>  ro bots.txt your application avaiable or searchable for search engine.if your app is on cloud
+
+>> An image can be in any format ++>>png.  jpeg.    .svg (scalable victor   graphics }
+
+>>  svg file format for 2D and 3D type images format and image stored in xml format but whereas normal images stored in binary format 
+
+>>  we can have images stored in base 64 format 
+
+>>  to recognize it is base 64 images there you need to see data:images/png;base-64
+
+=======================================================
+	For testing the code in PRODUCTION MODE::
+
+REACT ---FOR WEB 
+
+React Native ----- For mobile app dvelpments
+
+
+>> To use react development tools first we need to install development tools add  ons to the browser
+
+>> once added we need to restart browser compile your react code in production mode using below command 
+
+>> npm run build 
+
+if it fails then we  need to instaall serve for testing purpose 
+>>npm install -g serve 
+
+>> serve -s build
+
+=======================================================
+
+		
+REACT APPL :  tested 2 modes
+                 1.  dev testing
+	2.  production testing
+
+REACT -----> Component , Rendering , Form , API Handling,Parent child communication ,Vice versa ,Promise / fetch API
+
+REACT Creates virtual dom 
+=======================================================
+		RECONSILATION : 
+                               ~~~~~~~~~~~~~~~~~~~~
+
+V.DOM it compares blw the new dom and old dom if there are any new tree ,if it finds new one the it removes the old one and new one get updated . it is also called as Observable design Pattern 
+
+>> In virtual dom as many times it can upadte but in normal dom only one time is allowed 
+
+>>  
+
+=======================================================
+
+		JSX
+
+>>     JavaScript like XML 
+>>    component is rresponsible for peroforming all actions 
+
+Component:  
+>> Componenets:
+
+	1. Functional 
+
+	2. Class component
+
+=======================================================
+
+DOM ====VIRTUAL DOM 
+
+Render
+
+FUNCTIONA 0r  CLASS
+
+COMPONENTS are splitted into 2 types 
+
+Types 1. uncontrollled 2. controlled 
+ 
+Component Life Cycle :
+react 3rd party components like : calennder ,CRasol ,hamberger Etc
+
+		WITHDRAWS :
+                               ````````````````````````
+
+> CHILD Parent COmmunication
+
+> FORM VALIDATION 
+
+=======================================================
+
+		COMPONENTS
+
+>>  Every components have property and state
+
+>>  state to save component data temporary
+
+>> property is used to transefering one component data to another component 
+
+>> FUNCTIONA 0r  CLASS
+
+>>  COMPONENTS are splitted into 2 types 
+
+>>   Types     :-
+	1. uncontrollled 
+	2. controlled 
+
+>> For entire react   appl.  "-=-=  ROOT =-=" is parent 
+
+>> Every Component first letter should be  UPPER CASE
+
+>> Every compoent we need to create 3 files 
+
+	1. Component .JS
+
+	2. Component  .css
+
+	3 .Component.test.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

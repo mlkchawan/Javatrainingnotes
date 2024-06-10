@@ -1,0 +1,23 @@
+========== day 29 =============================================
+
+TOC FOR THESE WEEK
+~~~~~~~~~~~~~~~~~~~~~~~
+Spring Boot+MVC2+Hibernate+Log4j+Junit+Hikari+Dao+Layered Approaches in dev
+
+
+==================================================================
+>>   Spring boot supports Uber jar architecture.
+>>   Uber jars are used in the spring  boot ...nothing but jar within jar
+>>  spring boot used for cloud based designing
+>>  To design  a spring boot ,bewlow are the ways:
+
+1    usng Eclipse -------maven /gradle
+ 2   Using Springboot intilizer  
+3    Using springboot cli
+4     manual approach 
+
+==================================================================
+
+Free marker for templates
+
+@Repository ,@service,@ restController ,@Component Scanning

@@ -1,0 +1,10 @@
+Hibernate
+
+ACID roperties
+Primaray key,foreign key creations
+Sequence
+Check,not null constraints
+Cascading rules
+Transaction ISolation levels and propagationslation
+Relationships,one-to-one,one-to-many,many-to-many
+==============================================================

@@ -1,0 +1,52 @@
+======================  day 32 ==========================
+
+Springboot take care of   CLI(COMMAND LINE INTERFACE ,boot strapping, dependencies ,framework,integrations,testing tools,auto configuration, starters.
+
+>>  It allows to avoid heavy configuration of XML which is present in spring:
+
+>>  it provides easy maintenance and creation of REST end points
+
+>>  It includes embedded Tomcat-server
+>> Deployment is very easy, war and jar file can be easily deployed in the tomcat server
+>> Microservice Based Architecture:
+
+=======================================================
+
+>>  Springboot follows jar configuration i.e,   { UBER               CONFIGURATION }.
+
+>>  RestControllers - for running appli without the jsp pages 
+
+>>  POST-MAN ===it is a APPlication
+
+>>  1. it is also called as REST AGENT / AGENT
+>    2. Springboot provides   ""  Hal Browser.""
+>    3.
+
+=======================================================
+ h2 database is inbuilt database .
+>>   spring application.rin  ---does bootstrapping : it will do boot strapping into the memory for execution
+
+>> spring boot application follows package structure.
+
+>>  Entity no found /illegeal action / ==========that is due to different package names 
+
+>>  Same configuration is not used in dev and pre -production ,production 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

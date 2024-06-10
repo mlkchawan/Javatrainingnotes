@@ -1,0 +1,63 @@
+========================   day @ 31    ====================
+
+====>>>>  Program  on ONLINE SHOPPING APP <<<<<=========
+ 
+                               List of topics covered in th program  :-
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+HashSet
+List
+Hibernate
+Spring MVC
+Spring MVC validations
+Properties
+java config
+c3po
+Jsp
+DAO
+POJO
+Setter Injection
+OOPS 
+layered architecture
+Spring Security
+UserDefined Exceptions
+Log4j
+Pagination using Hibernate
+Tx management
+=======================================================
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+                    STARTERS  AND AUTO CONFIGURATIONS
+                 `````````````````````````````````````````````````````````````````````
+SPRINGBOOT HAS CAME UP WITH "" STARTER "" CONCEPT .springboot follows same layered architecture.it also supports h2 database.{ h2 }  is NOSQL DATABASE.And it is mainly used for "training " and "poc "  purpose .but not used for product development.  By default h2 is disabled .so we need to enable it .{ spring.h2.enable }
+
+>>  jar = .class + MANIFEST.MF
+jar files has combination of class and MANIFEST .MF files
+
+Starters : Starter is like a jar but it contains group of jars and supporting dependencies.
+
+
+ .       ____          _            __ _ _
+ /\\ /  ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_  | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =======|_|=========|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.16)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

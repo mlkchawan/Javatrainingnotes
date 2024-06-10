@@ -1,0 +1,80 @@
+ ===================================== Day  18  =======================================
+TASKS  : (high proirity)
+~~~~~~~
+>>    Write a servlet program to upload pdf files to server.  (without  web.xml)  ++>>                  Wednesday   --- >{collections included,
+
+>>    HIKARI  Connection pool mechanism using spring core.  +++>> Thursday ---->maven,helper classes { call that method 
+>>    write a java program to read an  csv file........use File io package +++>>  wednesday
+>>    ER diagram {unique table} >> self learning -+++>>> friday
+======================================================================================
+>> https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html#%3Cinit%3E(java.lang.String)
+
+
+>> https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html
+======================================================================================
+Hierarchy for spring core :
+
+>>   Bean factory Container is the root interface  >> ApplicationCOntext interface >> 
+
+======================================================================================
+
+SPRING CORE +SPRING MVC === we can develop application 
+======================================================================================
+                                                         Spring MVC
+>> SpringMVC follows MVC architure
+>>   Annotations start from here 
+>>   MVC -- >> Model View Controller
+>>   using mvc web appl can design
+>>   for web appli === html+ javascript+ css/SAAS + Springcore
+
+>>   M ---model { it is related to jdbc/ hibernate
+>>   V --- view      {html/jsp }  
+>>   C ---controller  { servlet,jsp,filter}
+
+>>   Mvc -1 and Mvc-2  are types of architure in mvc
+>>   Mvc 1  controller will be JSP (cannot be  controller )
+>>   Mvc 2 { Model will be jdbc/hibernate -controller will be servlet } 
+>>   Dispatcher servlet is also called as front controller/user agent /main controller
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1)Client requests for a page by specifying the Web URL for the page. E.g. https://skolaparthi.com
+
+2)Client request is intercepted by the Dispatcher Servlet also known as Front Controller. Dispatcher Servlet is a servlet specified in Web.XML file (for XML Based configurations) or in the Web Configuration class (for java based configurations).
+3)Dispatcher Servlet uses URL Mapping Handler to find out the relevant controller class to which request should be passed for subsequent processing. For example, If you have a Controller defined for all requests by specifying “/” in the URL, all requests will be entertained by that controller.
+4)Once Dispatcher Servlet has identified the Controller to be considered, it passes the client request to the controller.
+5)The controller class is the main class controlling the business logic flow once request has been dispatched to it by dispatcher servlet. This class will implement the methods for different type of http requests (e.g. GET, POST) and all logic to call Service layer methods will reside in this controller class.
+6)The controller class will also be responsible for returning the ModelAndView object back to the dispatcher servlet after getting all business logic executed and any data returned from DAO layer. ModelAndView object returned by the disptach controller it will give  back to the controller specified both view and model objects.
+
+
+Controller class is annotated by @Controller annotation.
+
+7)After receiving ModelAndView object from the controller, Dispatcher Servlet now sends model object to view resolver to get the name of the view which needs to be rendered.
+8)Once the view to be rendered has been identified, Dispatcher Servlet passes model object to the view. Model object contains the data which needs to be displayed in the view. View will be rendered with the model data. Views can be designed in any front-end technology.
+9)This view is returned to the client and client can see the view and associated data on his browser.
+
+
+>>  dispatch servlet is provided by SpringMvc and it is predefined and stored in jar file. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

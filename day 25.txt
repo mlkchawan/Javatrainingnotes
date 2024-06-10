@@ -1,0 +1,108 @@
+sql query execution plan" === Explore it
+=======================       Day 25      ============================
+
+
+EROR clearance::
+
+>>   when classnotfound definantion
+>>   windrows preference ==> deployment assembly =======>>       properties==>> add maven dependencies 
+
+==================================================================
+ 
+      ~~~~~~~~~~~~~        HIBERNATE          ~~~~~~~~~~~~~~~~
+
+>>  Hibernate supports RDBMS databases like : sql ,postgre sql, oracle etc.
+
+>>  sql queries are dependent on db .that is one drawback 
+
+>> cache memory is used for faster retrieval of data from the        database.
+
+>> After giving the sql query it will do parsing in the background 
+
+>> In the backend it has "sql query execution plan"
+
+>>  cached Rowsets and cached result set
+
+>>  Cascading rules 
+
+>>  Relationships
+
+>>  ORM  ; ORM ------->> convert pojo class to table and vice versa
+=================================================================
+
+>>  table creation should be automatic
+
+>>  JPA  --- is a specification;
+
+>> SPECIFICATIONS : Are set of rules and regulations
+
+>> Hibernate is the  implementor for JPA Specifications
+>> ibatis ,toplink is the compitotors to them .
+
+>>  hibernate is a vendor who implemented the JPA Specifications
+       its open source
+
+>>  apache has its own JPA Specificationa .its name is APache persistent API
+
+>>   Hibernate is giving  hql (Hibernate query language ) --- hql is also independent
+
+>> cache is provided by hql .
+
+>> cache giving ---1st level ,2nd level caching (3rd party caching)
+
+>>  3rd partry caching ---memcache ,EH Cache ,swarn cache,Hazelcast,Reddis ...........etc
+
+>> its providing relationship
+
+>> its Supports keys,  ORM , Supports Collections ,
+
+>> hibernate ogm (Object grid Mapper)  you can push/pull the data from db it implemented using mongo DB
+
+>> we can move data from one db to another db using dump,later import into new db
+
+
+TO WORK ON HIBERNATES WE HAVE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>>  hibernate cfg xml file
+>>  pojo class
+>>  Mapping file.xml
+>>  Test class
+==================================================================
+
+1)Create a config object and load cfg metadata into memory.
+
+2)Using config object,get session factory object.
+
+3)from sessionfactory object,fetch session and open that
+session with database.
+
+4)Once connection is established,initiate tx.
+
+5)perform db operations
+
+6)tx shld be commited
+
+7)close session with db.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

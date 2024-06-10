@@ -1,0 +1,142 @@
+=====================  day 36  ===========================
+
+When do you go with micro services ?
+
+=> when we need only limited features like : 5 features then go for MONOLITHICS ARCH
+
+>> when we want to have n number of features and in future you want to add many features then go for micro services . 
+
+>> Microservices need more man power and budget also more cause architeciture is too expensive
+
+>> DRAWBACK ::
+
+>> high maintaince  and more money.
+
+=======================================================
+
+Microservice1 ---- down ----------?
+
+For every microservices we have independent db ? yes 
+per service design pattern 
+DB per shared microservices -- design pattern 
+Circuit breaker design pattern?
+
+>> Greeen field microservices : Means microservices that we create from the scratch 
+
+>> Brown Field MIcroservices : means  microservices that we extend from the old one.
+
+>>  12 factor rules : { cd cb bp pc dd la }
+>>  Follow design patterns 
+
+>> How do you handle transcations in Microservices ?
+>> How do you aggregate logs from multiple microservices ?
+>> Do we have admin dashboard to monitor all microservices in project?
+=======================================================
+when we have many  Micro services then we need a server to run .then we choose VM (virtual machine): 
+>> VM (heavy weight)  so we use  -----Containers : is a light version of the VM 
+=======================================================
+>>  API GATEWAY   to security (): Netflix gatewat , picotal cloud foundary 
+                                   ||
+                                    .
+>>  API  and Service Discovery collebrates each other and 
+                                    ||
+                                     .
+>> Service discovery have all the information of services with it ( COLLECTIONS)
+
+>> when your service is down and your replica is running then .when one OF the service is down then it redirects to replica using these     "" BLUE GREEN  DEPLOYMENT DESIGN PATTERN "" is used to take about the services .
+
+>>  App dynamics/PCF /NEW RELICS/DATA DOGS   are used to know the database is in working condition are not .This willl keep the monitoring of the DB
+
+>>  RPC ( remote Process call ) /grpc /RMI /Messasing queue ===are used to communicate one service with another service .
+
+>>  Load balancing : is done by using replica services 
+
+=======================================================
+(Publisher) push a message  to queue  ------------->> (receiever) Pull the msg from the queue                            
+
+	   Event Deligation Mechanism
+=======================================================
+>>  CORS : Cross Origin Resource Sharing :
+
+Cors should be enabled at server side.------comes under  security layer 
+=======================================================
+
+CUCUMBER TOOL -BDD  behaviour driven 
+
+Development (given,when ,then )
+=======================================================
+Program on MICROSERVICES :
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1) one app for service discovery 
+2) 2 micro services 
+3) Using Multi module project or Manual approach 
+=======================================================
+
+
+		               HTML 5
+                               `````````````````````````````
+>> . html 4.x or  html 5.x   are two differents of versions.
+
+>>. latest browser is needed or updated browser 
+
+:>>. We can Design static web pages 
+
+>>. using html we cannot create a  full pludged web app . we need to integrate  javaScript.
+  
+>>. brower can understand html 
+
+>>.uses http / https protocols 
+
+>>. for beautification purpose CSS 3 is used
+
+>>.  html5test.com is used to  browser score for current html version
+
+>>// Responsive web designing is also known.
+
+>>/.    
+ =======================================================
+           SYNTAX
+
+<html>
+<head>
+<title></title>
+<script> </script>
+<body>
+
+good morning 
+</body> 
+</head>
+</html>
+
+=======================================================
+TASK ::::         ??<><><><><><><><><><><><><><><><><><><><><>
+
+h1,h2,h3,h4,h5
+bold
+italic
+font
+image tags
+anchor tags
+input tags
+marquee and marquee images--left to right and right to left ,bottom to top and top to bottom.
+
+
+=======================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

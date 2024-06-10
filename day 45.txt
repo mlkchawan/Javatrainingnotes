@@ -1,0 +1,78 @@
+
+<noscript> Js is disabled </noscript>
+
+>>  By Default java Script is disabled in some of the browsers.         there you will find <noscript tag get > activated 
+
+>>>app.js is a entry point 
+>
+>react dom is splitted into two parts
+>client react dom api
+>
+
+>createRoot(domNode, options?)--to create a root e use this
+root.render(reactNode)---
+root.unmount()----
+=======================================================
+
+		Steps to disable js in browser 
+
+crtl + shift + I ====open inspect
+
+Cntl + shift +P  ===>> java script disable +====>> enter 
+
+>> After that js get disabled and the matter in the <noscript tag> get activated.
+
+>> https://react.dev/reference/react-dom 
+
+
+=======================================================
+	
+	Conventions of Using State in React:
+ 
+The state of a component should prevail throughout its lifetime, thus we
+ must first have some initial state, to do so we should define the State in 
+the constructor of the component’s class.
+
+The state should never be updated explicitly. React uses an observable 
+object as the state that observes what changes are made to the state and
+ helps the component behave accordingly.
+
+React provides its own method setState(). setState() method takes a single 
+parameter and expects an object which should contain the set of values to
+ be updated. Once the update is done the method implicitly calls the
+ render() method to repaint the page. Hence, the correct method of 
+updating the value of a state will be similar to the code below.
+ 
+State updates should be independent. The state object of a component 
+may contain multiple attributes and React allows to use setState() function
+ to update only a subset of those attributes as well as using multiple setState
+
+() methods to update each attribute value independently.
+The only time we are allowed to define the state explicitly is in the constructor to provide the initial state.
+
+>>State is not applicable for the componensts that we create using functionc. state works only for components that we are using class
+but from the lastest react version.ie from 16 version 0n words works even for functional approach we  can achieve state using "hooks  concepts
+
+>>To change state values dynamically we need to use below method: 
+
+=======================================================
+
+>> JSX 
+onclick={ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,31 @@
+================= DAy 12 ==========================
+>>  APCHE  TOMCAT version is 8.5
+>>  Tomcat server is a web server.
+>>  
+
+>> AJP is mainly used for servers
+>> 
+
+Fore core JAva  ---->> the connector should be in build oathof our project
+>> 
+
+>> NIO ==>> NON BLOCKING I/O ===>> it is enabled in every server to perform parallel operation
+>> 
+
+>>  inside tomcat server folder
+>> All web app which we create wil be started in webapp folder
+>> All 3rd party libraries stored in lib folder
+>> LOG files for sesrver will be placed in log folder
+>> Tomcat can be started and stop from bin folder
+
+>> Always encryption is done to the username and password in jdbc.ie sensitive data should be encrypted
+>> NOTE : always encryption and decryption should be done on same operating system/ same JVM
+>> JVM differs from one os to other
+>> JVM is platform dependent ,java is independent,Byte code is independent
+>> For encryption and decryption we should always use same Alogorithm
+>> 
+
+=================================================================
+create a new java project  with the name java security and packaage withe the name com.infinite.
+
+>>> Write a servlet program to read data from properties file using Servlets. (hint:INputStream st=getservletContext().getResourceAsStream();

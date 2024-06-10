@@ -1,0 +1,297 @@
+========================  day 35     ======================
+
+                      SPRING SUITE TOOL 4  (STS -4)
+               ******************************************
+
+>>  it is build top on the eclipse 
+
+>>  sts 4 used to develop springboot applic,web services ,micro services ,cloud app etc .
+
+>>  mainly for pipeline creation we use Groovy 
+
+
+Doing clean install from command line 
+
+> : Click on project and copy the location of the  proj
+>. then open command line (cmd)
+>. d:
+>. cd "path of the proj"
+>. mvnw clean install
+
+=======================================================
+
+>> i want to increase heapaize of ajvm at runtime ?
+>>  i want to add additional paramters or values to JVM at runtime
+ solu ::  -D is used 
+
+Rules :
+=====
+>>   always we recommend you to use - D before jar file .
+         {java -Dspring.profiles.active=production -jar my-application.jar}
+
+>>  want to jvm /heap size of the jvm them use (--) java -jar my-application.jar --spring.profiles.active=production.
+=======================================================
+                                  YAML VS PROPERTIES 
+                           *********************************
+>>  Alternate to properties files is yaml 
+
+>> extension is yaml is .yaml or yam 
+
+>>  Yaml is universally supported  
+
+>>  yaml isupports  Hierarchical
+>> @property annation is not supported by yaml only support by .properties file 
+
+>> Yaml supports collections types MAP ,LIST ,SCALAR Types
+  
+ DRAWBACKS ::
+
+>>  Yaml file has indendation issues ( spaces)
+
+=======================================================
+
+creating project using CLI :-
+=======================================================
+[][][[][][][][]][]]]]][[[][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+=======================================================
+                                   MICRO-SERVICES :
+                             ~~~~~~~~~~~~~~~~~~~~~~~~
+Pre equistics :
+~~~~~~~~~~~
+1. swagger 
+2. web services 
+3. dev tools 
+
+
+web servies ==========>>
+
+SOAP ------- SLow because soap uses xml >security is very goof ,it supports different protocols .New customer or new projects are not adpting  SOAP instead THEY ARE USING "" REST"".
+
+REST ---------- Fast, Secuirty is moderate ,Http/hhtp protocol .
+
+OAKTA FRAME WORK , SSO techniquee   like JSON, SAML Quath2,X,Kerberos ,LDAP Authenticaion .
+
+=======>>>>
+
+Producer - generate data
+
+consumer - read/featch data from producer using Http/https
+
+CONSUMER  should know the endpoint URL .
+
+We make Api calls using url 
+>. An Api is a code snippet or program with set of rules and regulations used for transferring the data between 2 parties or in simple it is a mediator .
+
+WSDL ---SOAP Services  
+
+JAX-RS ,RESTEASY ,SPRING ,SPRINGBOOT,GROOVY,JERSEY , are used to design Rest ful services  (java)
+
+JAX -RS ------ SOAP services
+
+SAML IS ALSO for security 
+=======================================================
+
+MICRO SERVICES ------- is a rua
+
+MIcreoservices  uses to deisgn = 
+Anyb App that is developed sjould follows the 12 factors is mandotry'
+
+
+miro services uses java is java backend services
+
+ ====================================================
+Running/Deployment------Docker,Kubernates,Openshift
+Code Quality testing-------SonarQube,PMD,COCO
+Databases------RDBMS db or No SQL dbs
+Logging---------Loggly,AWS log feature,ELK Stack,Splunk,Sentry server
+Monitoring----New Relic/Appdynamics
+Cloud---AWS/Heroku/Azure/GCP/Alibaba/PCF
+Code repository----Git/Github/bitbucket/Gitlab/AWS
+Testing  Tool----Junit/TestNG
+CI/CD tool----Jenkins/Teamcity
+Issue Tracking--Jira/Service Now
+Dependency Management----Maven,Gradle
+Global Dashboards----SpringBoot Admin Dashboard
+Lookup Server----Eureka/PCF/Netflix 3rd party servers
+Corporate/Artifactory repository----JFROG/Sonatype nexus
+REST Documentation----Swagger
+API designing-----Swagger/Open API,Mulesoft RAML
+Integrations----Apache Camel/Mulesoft/Tibco ESB/Jboss ESB
+Browser Compatability Testing----Selenium
+Load/DB/Webservice Testing---Jmeter
+Technologies---SpringBoot,Spring Cloud
+=======================================================
+FOR DEVELOPING MICRO SERVICE APPLICATION FROM START TO END POINT WE NEED TO KNOW ALL THESE BELOW 
+
+
+>>  Runnung /development ----------- docker ,kubernates ,oen shit happrnd 
+
+>> code Quality testing = sonar Qube , PMD
+
+> Datase =RDMBMS DB OR NO SQL dbs 
+
+>>    LOgging : loggly,aws  log feature .elk stack .splunk .sentry server
+
+>> Code Repositity      : git/github , bitbucet /gitlab 
+
+>> MOnitoring = new relic /App dynamics
+
+>> Testing =jUNIt 
+
+>> CI/CD tool ==JENKINS/Team city 
+
+>> Issue tracking =jira/service now 
+
+>> Dependecny managemnet --maven .gradle 
+
+>> Global Dashboards ==Springboot admin dashboard 
+
+>> Lookup SErver === Eurekha /PCF/NETFLIx 3rd party servers
+
+>> Corporate /artifactory repository ---JFROG /sonatype nexus 
+
+>> DOcumentation == Swagger 
+
+>> API DEsigns ==== SWAgger /open API ,MULESOFT RAML
+
+>> INTEGRARTIONS ====Apache camel /mulesoft /tibcl ESB /jboss ESB
+
+>> BRoser compatability ==== selenium 
+
+
+>> Load /DB /Web service testing ==Jmeter 
+
+>> Technologies ==Springboot .Spring cloud 
+=======================================================
+
+With the help of up and down the spring boot actuator .we can find it will check the heaalth status of application service is up or down
+
+up -  means active
+down -means inactive
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

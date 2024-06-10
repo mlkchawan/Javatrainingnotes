@@ -1,0 +1,54 @@
+TASK    ============>>>>  coalsec ,case in mysql 
+
+==========================  Mysql     ===============================================
+
+For hands on experience:
+
+>>  https://sqlzoo.net/wiki/SUM_and_COUNT
+
+>>  https://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial
+
+>>   https://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~..
+
+>> SELECT SUM(population)
+FROM world    == for doing sum
+
+>>    select distinct continent from world; ==>> to dsiplay only the real entities avoinding           duplicates
+
+>>   To commit data:     commit;
+
+>>   to roll back :   roll back;
+>>   set AUTO COMMIT ()=false;
+>>   Con,Auto connect
+>> roll back is for only table records ..but not for db objects.
+>> Db object : table,view, sequences,trigger,index ,stored,procedure etc.
+
+>> inserting data into table using  select pproach ;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      PRIMARY KEY  AND  FOREIGN KEY 
+>>   NORMALISATION :: The processs of organizing the data in the database for easy maintaince,redundance .
+ 
+Types of normalization
+>>    1 NF
+>>    2 NF
+>>    3NF
+>>    Boycee codd NF
+
+>> memory will not be allocated to the views 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              CASCADING RULES
+
+>> My sql has five reference options: 
+CASCADE, 
+SET NULL,
+NO  ACTION,
+RESTRICT
+SET DEFAULT
+
+======================================================================================
+>>   mysql> insert into laptop(price,laptop) select price,laptop from productmodel;  { for combining two tables }
+   
+>>   mysql> select ifnull(laptopname,'sony') from laptop;  { if there is any null in table records}
+
+>>    mysql> select ifnull(laptopname,'sony')as laptopname,ifnull(origin,'india') as origin,ifnull(pincode,6788)as pincode from laptop;

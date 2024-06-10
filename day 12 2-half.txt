@@ -1,0 +1,59 @@
+===============>>>>>>>>>>      DAY 12    <<<<<<<======================
+
+>>  MySql
+
+>>DBase2 -->>DBase3--->> Access--->>Oracle--->>>MySql
+>> Text file =prones to virus attacks and doesnt support Transcations 
+>> MySql  has------>> engine/server (which understands query)
+>> Work bench is IDE and MY SQL is Db
+
+>> we have 4-5 types of licenses   1. Enterprise licence ,2. community Licence
+>>  L A M P{ Linux , Apache,, Mysql,  pearl } technologies
+>>  Tomcat -- is server
+>>  Apache ----is a http engine
+___________________________________________
+>>>>>>    Database  
+
+1. data should support 24/7 transction.
+2. Data retieval shouild be easy
+3. cost should be moderate
+4. support will be available
+5.provide data security
+6.Data integrity
+7.No Duplicate
+8.db backups
+9.i18n support
+10. Availability
+11. Durability
+12.Consistency
+
+>>> Data integrity is must followed thing in mysql.
+
+>>>  Schema is nothing but design --->> dB ---->> Table======>>> These secenario comes to RDBMS DB 
+
+>>> Db has two modes 
+
+
+1.    any data base which accresed on CLouds 
+2.   on permises db is local 
+3.   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12.

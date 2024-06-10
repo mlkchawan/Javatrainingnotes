@@ -1,0 +1,100 @@
+hibernate core 4.3.6 version hav to be used 
+
+>>>>>>>            decriminator 
+
+>>>>>>>             cascading rules 
+
+>>>>>>>             explore diagram on ER diagrams
+==================================================================
+[6:20 PM] Srinivas (Guest)
+
+100marks
+
+[6:20 PM] Srinivas (Guest)
+
+1 question
+
+[6:20 PM] Srinivas (Guest)
+
+Spring MVC+Hibernate
+
+[6:21 PM] Srinivas (Guest)
+
++log4j
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+hIBERNATE introduction
+object lifecycle
+dao with impl
+Spring MVC+Hibernate
+criteria API
+cache
+HQL
+Collections
+
+descriminator
+cascading
+primary key
+foriegn
+composite primary key
+handling null in db
+nullif
+case in mysql
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+=========================   Day 28   ==============================
+
+Recap  :
+~~~~~~~
+>> Criteria API
+
+>> HQL 
+
+>> Cache  
+
+>> while using the community repository ..we get some types of errors .
+
+>> but When we use corporate repository we dont get any errors 
+
+>> Cache--- 2nd level
+
+
+multi part is a part of springframework.
+
+(instructor )table 1           table 2 (instructor detail)
+id                                                      id 
+firstname                                        youtube channel                      
+lastname                                         hobby
+email  
+
+==================================================================
+
+id =           1                                          id=1
+firstname =srini                               ytchanel =
+lastanme = patel
+email =vasu34k@gm.com
+
+=================================================================
+
+Descriminator : is a differentiator column between child and parent column and column consists of different values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

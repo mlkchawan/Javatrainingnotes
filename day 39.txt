@@ -1,0 +1,176 @@
+==================       day 39    =========================
+
+Explore SPA ?
+
+can i disable a javascript in my browser ? 
+
+Note ::  Becareful with Eval, is one of the most dangerous .it creates a various problems in the project 
+=======================================================
+		TOC for the Week 
+>>   React js./Type script
+>>   JavaScript 
+>>   Html /Css
+>>   NodeJs basics 
+>>   Xml/Json basics 
+=======================================================
+###     Selenium for browser Testing   :
+
+Ways to run js code :
+
+1. Using browser console 
+2. THru IDE ECLPSE or Vs code  or Sublime 
+3.  Create a HTML  file with js code inline 
+4. Using JS plaground 
+5.  Using Node js 
+=======================================================
+	                  JAVA SCRIPT
+	               ~~~~~~~~~~~~~
+
+JavaScript  -----------is independent 
+
+Java Script and java are not same both are different  
+>>  Js is a Object based Scripting language used for dynamic web          pages.
+
+>> We can design even mobile apps using javascriot language
+       example : Kony mobile frame work ,Phione gap frame work etc 
+
+>> Web services can also be created 
+
+>> Before Js there is a Lua ,but it wont work all ofthe platforms
+>>  extension .js 
+>>  Java ----has----Jvm .
+>>  javaScript ------has  -----VM in browser
+>>  Every browser will have in bulit javascript engine which takes the responsibility of running ur script code 
+>> JAVA script code is writen in C++
+>> JVM Also designed using C ,C++
+
+>>  Chrome  has -------v8
+>>  IE/Edge  ---has ---------- chakra
+>>  safari -------------Rhino 
+
+>> JAVA had a Javascript package  ------ Rhino as  a JavaScript Engine 
+
+>> DWR (direct web Remoting ) Frame work at which from java script we wan to call java then we use the frame work 
+
+>>  JAVA SCRIPT  has NO data Types :
+
+>> Js supports few Collections LIke Array, Hash MAp ,List etc .
+=======================================================
+                       Disadvantages ::     ======    >>>>             overcomes 
+                      ~~~~~~~~~~~~~~~~~
+1. Not so secure                          ---->>   can be handled using JSON tokens and other secuirty mechanisms
+
+2. Doesnt support all OOPS features          =====>>> Upgrade to Es7 or V8 
+3. Multi threading is not supported 
+4. Doesnt support NIO operations 
+5.Cannot create network based apps 
+6.Java script doesnt support databases directly
+7. Javascript doesnt support desktop applications 
+=======================================================
+ANSI C ------ standards are followed by any of the c/c++ ide developers
+
+STPI ---- 
+
+ECMA    ----- java script follows Europeian Computers Manufactures Association  standards.
+
+ES5
+ES6 ------------recommended verision for learning  and above these versin are also allowed and they were some updated .
+ES7
+ES8
+=====================================================
+Front -End techies are  : Reacts JS,Reactnative ,Angular ,Backbone ,VUEJS   etc.
+
+Above Framework will use node js capabilities too perform Scaffolding and for writing /running codes .
+
+Without Node Js nothing is possible in front end 
+
+Node js is Evironment 
+
+In java script  CI/CD servers    --------- we use jenkins /team city 
+
+Java -----has ----maven 
+Javascript -------has --------NPM Node package manager  ( part of the Node JS ).
+
+>> To create a corporate repo ,we can usr Nexux sonatype or Jfrog
+
+>> Code quality testing for javascript =---------SonarQube is used 
+>> For unit testing  ------we use protractor frame work 	
+IDE ---------->> VS code
+
+SYNTAX :
+
+for variable :  var <variablename>;
+
+There is 8 ways to run Js Functions :
+
+For Functions :
+
+function < functionname>()
+{
+}
+
+>> . If Any browser is not supportting html5 features on specific versions or features then we can use   "" POLYFILLS""
+
+A POLYFILLS are java Script commands to Achieve the results .
+
+A polyfils is set of javascript instructions or a js program provided by the 3rd party vendrrs to achieve a specific requiremnts on specified browser version.
+
+POLYFILLS are temporary solutions for some instance 
+=======================================================
+
+want to display output on browser  ==== document.write()
+
+
+=======================================================
+		    DOM ( Document object Manager)
+
+Dom structure means Parent and child :
+
+>> Using Dom we can do validations 
+
+>> we can change the components  values dynamically 
+
+>> Dom is upported by HTML and Xml 
+
+document.getElementsById()
+document.getElementsByName()
+document.getElementsByClass()
+
+
+
+		    TYPESCRIPT  ::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

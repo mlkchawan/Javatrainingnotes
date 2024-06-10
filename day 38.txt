@@ -1,0 +1,137 @@
+=================       day  38      =========================
+
+The @EnableAsync annotation switches on Spring’s ability to run @Async methods in a background thread pool.
+ 
+@ASync for making the class asynchronous . 
+===============================================================================
+>> Data integrity is main the main contraint
+
+>>  For composite servicew we use Syncronous channel
+
+>>  For composite micro serices syn is best
+
+>>  Thread is a task( work )
+
+>>  threads work on Asycnronius .
+
+>>  A processor can have as many threads
+
+>>  Every process has name and id .Os will give some  vey key :value)
+
+>>   which ever class has main class 
+
+Threads are of two types :
+
+>> predefined is under control of JVM  
+
+>> user defined is under control of user
+
+>> 1. extend thread
+>> 2. implements runable 
+
+>> Runable is  called as functional interfernce : A function with single abstract is called as "Functional interferences ""
+======================================================
+
+
+
+
+>>  Commit or Flush ==commit will do commit your adat in database
+
+=>>  FLUSH  : will push or enter data 0r ,chanhes into the  backend>>
+
+
+Fore grounf > 
+
+DAemon  :: disk and ecxeurtion monitur.Demon threads
+
+DIsk and Execution cxcab be assinged with properties like 
+
+>> Treasds      can be assisgned with properties like high,medium,low
+
+>> Notify, Notify All , Wait 
+
+> All multi threads are Async no order
+
+>> there is a choice of databse when use ach abd data intigrity 
+
+>> For thread the base class is object
+
+=======================================================
+
+DEAD LOCKS 
+
+if two threads wan to access some thing then it is called as DEAD LOCKS. locking mechnISMo
+
+>> Locking mechanism ------it will viaolate  ACID Propertirs and intergrity issues,if we are  using databases.
+
+>>  Optimistic Locking mechanism
+>>  Pessimistc Locking mechanisic 
+
+>> these two mechanisms help in removing dirty reads and qunantub reqasass.
+
+>> No two 
+
+>> THREAD POOL IS A POOL OF THREADS OBJECTS WHICH CAN BE  CONFIGURED  AS A DYNAMIC POOL  IS CONFIGURED OR EXECUTiOT CLASS 
+
+>>   The  main use od the  avoid race condition or deadalcks in transm
+>> Thread pool is apool of thread objects which  cab be configured as a dynamuc ot fixed pool.
+
+Thread Executor or Executor class
+
+>>  Reflcetion or  introspectionclass
+
+>>   
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

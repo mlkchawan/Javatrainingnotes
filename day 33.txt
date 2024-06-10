@@ -1,0 +1,24 @@
+Exam topics
+``````````````   :    spring boot + mvc + DAO + layered architecture + Log4j properties  +  my sql + profiling (optional) + DEV tools (no coding in dev tools) .
+=======================================================
+SpringBoot with enable  Stripe  ===== payment  gateway 
+
+
+=======================================================
+Lombark  : libarary is used whenever there is change of NAME in pojo 
+
+{  https://projectlombok.org/features/ }
+=======================================================
+[][][[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Boiler plate code ::
+********************
+While developing a project in Java, we tend to repeat the similar kind of code for each class we create. Such kind of repetitive code is generally called boilerplate code.
+=======================================================
+
+What are the benefits of using Lombok ?
+****************************************
+You might think that if we can generate code automatically with the help of an IDE (like Eclipse/STS etc.), then what will be the benefit of using Lombok? For example, suppose you have a POJO class containing 10 fields/properties. In the middle of development if you want to change number of fields, or name of field or datatype of field. Then you must either update the  implementation of getterXXX(), setterXXX(), toString(), equals(), hashCode(), parameterized constructors etc. or remove them & regenerate once again. But if y
+
+==================        day 33    =========================
+>> 

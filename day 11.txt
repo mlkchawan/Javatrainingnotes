@@ -1,0 +1,52 @@
+=============================          DAY 11        ====================================
+
+1)Live Cricket score using Servlets and JSP
+2)Display latest news from the website :https://www.thehindu.com/
+and display the same on browser i
+table format.
+==================================================================================
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^   LOG4j  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+>>  log4j-- is a logging tool
+>         ^ logging for javac
+>>  Log4j is only for java..but logging tool already exist in the industry
+>>  S.O.P will use more storage which leads to slown down the processor
+>> S.O.P are not allowed for production
+Ex: 
+>>  loggins will be central  mechanisms it is one of advantage
+>>  Save time and Bussiness
+>>  logging will supports file appenders
+>>  logs are used for web APP , servlets and desktop applications
+>>  log4j are of 2 types =>> log4j.property / log4j.xml
+>>  properties will be in key and value format.
+>>  Modes      -- info  
+                      --  warning
+                      -- Error  
+                      -- Fatal
+                      -- critical 
+
+>> Jira + connector/sonar/internal portol/ ServiceNow+ Zender
+>> Log file got deleted then we have backup 1
+
+
+Modes:
+>> Loggly 
+>> ELK stack
+>>  SpLunk .....*** market Leader
+>> Sentry
+
+
+>> All error will be pushed to table/log file/server   but SAP connectors are must
+
+>> extension  of Logfile is .log
+>> log4j has Listener
+>> listners will scan for errors
+>>> LOg4J have some listners.listners will send the errors to log file
+
+DRAWBACKS FOR LOG4j ===========>> it is a some what slower when huge program is runned.
+
+
+
+>> MULESOFT  is a  multipurpose Connector.its a ESB tool 
+>>  

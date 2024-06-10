@@ -1,0 +1,33 @@
+>>   composition oops.
+
+=============================   DAY 15  ================================================                                                                  MAVEN
+~~ Mmaven has types of files [ war,jar,ear]
+Compitetor for maven is gradle
+
+>> Maven is a Built tool 
+>> packaging the App      ===    app should be packed and compress the file
+>> Reposoritry Management(mgmt)
+>> Transitive dependencies mgmnt  ===>>> composition all
+>> Dependency mngmnt  === denpendency means war 
+>> plugin mgent mgnt
+
+>> maven has reducing the major task
+>> Repositry ===>> collection of jars
+>> Any organization wont allow public repository
+>> maven rspository will create jar files
+
+>> Types of Repository:
+>> corporate ->> organization/company
+>> Local-->> in your machine
+>> public --->> secure but no secure [vendors for public use ] 
+
+Maven guess configuration file that ipom.xml and setting.xml
+>> Request -->> workspace,pom.xmll from local reposirired
+>> Nexos sona type
+>> Maven version 3.X is currently in use
+>> Every project will have pom.xml;
+
+\====================================
+
+>> pom { project object model } 
+>> 

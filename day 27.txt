@@ -1,0 +1,78 @@
+
+>>   Display onlt top ten records in my table 
+
+
+
+[4:32 PM] Srinivas (Guest)
+
+HQL From: HQL From is same as select clause in SQL . We can also create alias such as from Employee emp or from Employee as emp.
+
+HQL Join : HQL supports inner join, left outer join, right outer join and full join. For example, select e.name, a.city from Employee e INNER JOIN e.address a. In this query, Employee class should have a variable named address. We will look into it in the example code.
+
+Aggregate Functions: HQL supports commonly used aggregate functions such as count(*), count(distinct x), min(), max(), avg() and sum().
+
+Expressions: HQL supports arithmetic expressions (+, -, *, /), binary comparison operators (=, >=, <=, <>, !=, like), logical operations (and, or, not) etc.
+
+HQL also supports ordre by and group by clauses.
+
+HQL also supports sub-queries just like SQL queries.
+
+HQL supports DDL, DML and executing store procedures too.
+
+[4:35 PM] Srinivas (Guest)
+
+display only top 3 records in my table
+
+ 
+
+Note :data shld be in asc
+
+ 
+
+Hint: use "limit"
+
+
+
+=================   Day 27      =================================
+
+https://github.com/mlkchawan/cloud-test.git
+
+SONARQUBE
+---------------
+sonarqube--onpremises server
+sonarcloud-cloud server
+github/bitbucket account
+ 
+https://sonarcloud.io/login
+
+https://github.com/saikumar1413/sonarcloudtest.git
+
+https://github.com/settings/tokens
+
+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
+
+Criteria API
+---------------
+list cats=session.createcriteria("cat.class")
+.add(Retsrictions.like("name","IZ%")
+.add(Restrictions.gt("weight",new float(wt))
+
+
+in hql for inserting values at runtime is called 
+binds variable 
+
+https://docs.jboss.org/hibernate/core/3.3/reference/en/html/queryhql.html
+
+table columns and pojo columns count should match
+==================================================================
+
+
+Table column and Pojo columns should match 
+>> if names are not matching in HQL ,then it will be throw error messages.
+
+>> if there is parent child relationships,then DML operations will fail
+
+
+>> Alerts when data is not inserting into table:
+
+>> 

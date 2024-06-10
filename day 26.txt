@@ -1,0 +1,93 @@
+Write a springMVC  app,which should upload only pdf files to db table.
+ 
+Note : SPRING MVC +HIBERNATE , APACHE POI /COMMONS LIBRARY 
+
+file size should not exceed > 1 mb  == >> if size is more than1 mb the display "file size not supported" 
+
+=========================    DAY 26    =============================
+
+ ~~~~~~~~~~~    HIBERNATE OBJECT LIFE CYCLE  ~~~~~~~~~~~~~~
+
+>>> Hibernate object Life cycle  ???
+
+     1. Transient
+     2.Persistent
+     3.Detached 
+     4.Removed
+
+>>  Entity means table 
+
+>>  In hibernate the memory will be alocated in heap memory
+>>  Transient entities exsits in a heap memory 
+
+>>  Persistent /  pojo class ?
+
+CONCLUSION ::
+
+=> Newly created obj will be in transient state
+=> A persistent entity represents row and of the database 
+=> detatch the entitied 
+=> Removed entities will be marked for deletion whenever the situation comes the objects are deleted  
+
+==================================================================
+
+    ~~~~~~~~~~~~~~     SERIALIZATION      ~~~~~~~~~~~~~~~~
+TOC
+~~~~~~~
+Serialization
+deserialization
+Named Queries
+Criterial API
+HQL
+Relationships
+Inheritance
+cache
+
+>>   Serialization : process of saving SBI ( STATE BEHAVIOUR IDENTITY) of an object to storage medium is called serialization.
+
+>>   Desirializtion : the process of restoring the object SBI to actual state is called as deserialization.
+==================================================================
+
+~~~~~~~~~~~~~~~~     NAMED QUERIES  ~~~~~~~~~~~~~~  
+
+>> no more { select * from employee; }
+
+>> only we write { from employee;}
+
+=================================================================
+
+ 		NO CRITERIA API 
+		~~~~~~~~~~~~~~~~
+>> mainly to """ select""""" statement and will reduce the time
+
+>> OOP + ORM 
+
+===> Nested Sub queries 
+==>  COrrelated Sub queries
+==>  Join
+==>  Keys
+==>   where ,having.betweeen ,in,all,like,rollup,qube,group by,Nested 
+==>>  where,having,between,in,like,orderby,group by,rollup,qube
+===>>   rollup and qube-----Data Analytics,pivotal chart creations
+
+==================================================================]
+
+HIBERNATE ERROR :
+
+%%%      Exception in thread "main" org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

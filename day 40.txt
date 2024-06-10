@@ -1,0 +1,59 @@
+=====================     day 40  ========================
+
+explore  JAVA Melody Tool :
+
+Java melody is a open source APM tool.Apm stands for Application performance Manager /Monitoring tool .
+=======================================================
+Front Controller
+custom controller
+Service
+----aync methodss--execute logic in async mode--custom methods shld retrun completedFuture object to controller.
+=======================================================
+		 Enabling Async in SpringBoot 
+1. Add @Async before the methods which should run in asynchronous mode.
+
+2. Mthod in step1 should return CompleteFuture.
+
+3. Step2 method shouls always be in public 
+
+4.Enable @EnableAsync in Configurations file in project
+
+5.Run the app
+
+Note: @EnableAsync will autodetect the methods which were annotated with @Async automatically.
+
+@Enable Async will use ThreadPool to assign thread to perform Asynonous communication using THreadPoolEXecutor.
+
+=======================================================
+
+Using @Conditional,main advantage is we can avoid unnecessary loading of beans into memory;So that we can save memory space and CPU time,Which leads to faster application response.
+
+
+======================================================= 
+		Let Scope ,Local Scope :
+
+Single selectin,and multi selection, DEfalut selection
+
+
+
+========================================================
+
+Username
+passsword
+submit--- disabled    document.
+
+document.getelement
+
+
+
+
+
+
+
+
+
+
+
+
+
+

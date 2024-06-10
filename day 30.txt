@@ -1,0 +1,49 @@
+1.   Basic Spring MVC program to Spring boot Conversion 
+
+
+=====================    Day 30    =======================
+
+                                           SPRING BOOT
+                                      ~~~~~~~~~~~~~~~~~~~  
+1 .  is that spring boot is replacement for the Spring ??
+
+>>    Spring Boot is not a replacemnet for the spring .it is just updated version of the spring 
+
+>>    Spring tool 4 or Spring tool suite is mainly developed for the spring developers.
+
+{ https://spring.io/tools}
+
+
+               LAYERED APPROACH IN SPRING /SPRING BOOT
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Presentation layer  @controller --->> Bussiness layer/service @service ----->> Persistent layer  @Repository(DAO Access layer )
+
+1. Presentation layer ------@controller---->>   viewing and interacts with bussiness layer 
+2. BUssiness layer  --------@service------- >>     business logics are executed here ...and it interacts with persistent layer 
+3. Persistent layer ---------@Repository--->>   DAO layer  it interacts with Db.
+
+@Controller -> Classes annotated with this, are intended to receive a request from the client side. The first request comes to the Dispatcher Servlet, from where it passes the request to the particular controller using the value of @RequestMapping annotation.
+
+@Service -> Classes annotated with this, are intended to manipulate data, that we receive from the client or fetch from the database. All the manipulation with data should be done in this layer.
+
+@Repository --> Classes annotated with this, are intended to connect with database. It can also be considered as DAO(Data Access Object) layer. This layer should be restricted to CRUD (create, retrieve, update, delete) operations only. If any manipulation is required, data should be sent be send back to @Service layer
+
+==================================================================
+>> In java based configuration  we create java class and @Configuration annotation in spring boot
+
+==================================================================
+>>     In spring boot spring application class will bootstrap the                    current class asper the loading strategy (lazy,early)
+==================================================================
+>>     Display (-) ====>> Deprecated methods -- these methods               failed in test but still upto some extent but for product level it           will fail.
+>>    Deprecated methods are the methods which are no longer in use or dont use for the production environments.
+==================================================================
+                         @SpringBootApplication
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ @springbootApplication ====>>  @configuration  ( +) @enable Autoconfiguration ( +)  @Component Scan  ( -) .xml files
+
+================================================================>>  @Autowiring can reduce the no of lines in xml code.
+
+
+
+

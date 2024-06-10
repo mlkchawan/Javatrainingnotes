@@ -1,0 +1,275 @@
+
+=====================  day 46  ============================
+
+
+>>  Explore about state and Properties .
+
+>>  Explore about package.json\
+
+
+>>  React Routing :  To navigate from one page to another page.
+ 
+
+
+=======================================================
+
+application creation 
+
+open  cmd
+
+chnage directory to C:/D:  user 
+
+npx create-react-app  helloworldexample
+
+
+
+
+.......D:\reactroutingexample>npm install react-router-dom --save
+
+.......D:\reactroutingexample>npm install bootstrap --save
+
+
+=======================================================
+
+>> for creating routing add dependencies 
+
+>> create components 
+
+>> In React js evrything is controlled  by App.js
+
+>>    <Router>    </Router> tag is used to give the path of the page
+
+>>  {"'  '''} ==>> is called as JSX tag 
+
+>>  Template ==> tail wind css template are used in my proj.
+
+>> 
+
+=======================================================
+
+
+
+In index .js   add tag <broswer routert> tag <app> </broswer router?>
+
+>> 
+alidations 
+>routing
+>to-do-app
+>
+>state 
+>properties 
+>lambda functions in javascript
+>package.json
+>
+>State
+ 
+Props
+ 
+State is managed within the component	Props gets passed to the component
+State can be changed(mutable)	Props are read only and cannot be changed (immutable)
+State can be accessed using the use state hooks in functional components and in-class components can be accessed using this. State	Props can be accessed in functional component using props parameter and in-class component, props can the accessed using this.props
+State changes can be asynchronous	Props are read only
+State is controlled by react components	Props are controlled by whoever renders the components
+State can used to display changes with the component	Props are used to communicate between components
+>
+>Controller is a handler for executing a web request and returning a view.)
+>
+>in sb dispatcher servlet will do the routing 
+>react routing--> 
+>
+>
+>
+>
+>to create a new react application- "npx create-react-app reactroutingexample"
+>
+>
+>in this application 
+>
+>
+>npm install react-router-dom --save (it is for installing reactrouting dom dependency)
+>
+>npm install bootstrap --save      -->(auto aligment-bootstrap will do autoalignment that's why we r using that bootstrap)
+>bootstrap is a small lib 
+>
+>
+>step 1 creating 
+>
+>step 2 adding depen
+>step 3 create component folder --add 7 components and App.js is  a main component
+>
+>tailwinds is similar to css.it is a small library
+>tailwinds help u design interactive design(which gives some tags for css)
+>in css we can not apply conditions or loops.
+>"""""""""""by using that framework we can apply conditions and loops as well""""""""""""--to increase the
+>
+>
+>to craete routing
+->step1-->add routing dependencies
+->step-2-->create components as per the requirements
+->step3-->in app.js specify the routes.we use tags"<Routes>"
+                                                       \
+<route>
+ 
+>jsf is for server side--java server faces
+ 
+>exporting means making it public
+ 
+>in react 
+>to enable routes we r using <Routes> tag
+>the main use of routing is to navigating from one component to another component. 
+>if u want to do navigations from component we use navlink =====import { NavLink } from "react-router-dom";=====
+>
+>
+>in react we have 2 diff types of routers-1)BrowserRouter
+>
+>{new Date().toDateString()}-->for complete date 
+>
+>
+>
+>
+>Axios
+Fetch
+Superagent
+React-axios
+Use-http
+React-request
+=======================================================
+
+ 	             =used==>>React
+  >>   FETCH API ==used===>> Angular
+  	      =====used===>>Salesforce
+
+
+>>  Fetch API:
+>>   Works in asynchronous mode.
+
+>>   used in react,angular,salesforce.
+>>   using js we can't access db then it can achieved through API.We           \need to make API call(Rest Controller).
+>>   Competitor is Axion.
+
+>>  Front end we need to fetch data from backend 
+=================
+
+	                         AXIOM =
+                               ====>>we need to know HTTP Methods
+>>      we need to know promise and ASync ,callback 
+
+>>    using axiom fetch the data using API CALLS 
+
+>>  CORS ------ Cross Origin Resources Sharing.used to fecth data from on doamin to another domain
+
+=======================
+
+Validations 
+>routing
+>to-do-app
+>
+>state 
+>properties 
+>lambda functions in javascript
+>package.json
+>
+>State
+ 
+Props
+ 
+State is managed within the component	Props gets passed to the component
+State can be changed(mutable)	Props are read only and cannot be changed (immutable)
+State can be accessed using the use state hooks in functional components and in-class components can be accessed using this. State	Props can be accessed in functional component using props parameter and in-class component, props can the accessed using this.props
+State changes can be asynchronous	Props are read only
+State is controlled by react components	Props are controlled by whoever renders the components
+State can used to display changes with the component	Props are used to communicate between components
+>
+>Controller is a handler for executing a web request and returning a view.)
+>
+>in sb dispatcher servlet will do the routing 
+>react routing--> 
+>
+>
+>
+>
+>to create a new react application- "npx create-react-app reactroutingexample"
+>
+>
+>in this application 
+>
+>
+>npm install react-router-dom --save (it is for installing reactrouting dom dependency)
+>
+>npm install bootstrap --save      -->(auto aligment-bootstrap will do autoalignment that's why we r using that bootstrap)
+>bootstrap is a small lib 
+>
+>
+>step 1 creating 
+>
+>step 2 adding depen
+>step 3 create component folder --add 7 components and App.js is  a main component
+>
+>tailwinds is similar to css.it is a small library
+>tailwinds help u design interactive design(which gives some tags for css)
+>in css we can not apply conditions or loops.
+>"""""""""""by using that framework we can apply conditions and loops as well""""""""""""--to increase the
+>
+>
+>to craete routing
+->step1-->add routing dependencies
+->step-2-->create components as per the requirements
+->step3-->in app.js specify the routes.we use tags"<Routes>"
+                                                       \
+<route>
+ 
+>jsf is for server side--java server faces
+ 
+>exporting means making it public
+ 
+>in react 
+>to enable routes we r using <Routes> tag
+>the main use of routing is to navigating from one component to another component. 
+>if u want to do navigations from component we use navlink =====import { NavLink } from "react-router-dom";=====
+
+>in react we have 2 diff types of routers-1)BrowserRouter
+>
+>{new Date().toDateString()}-->for complete date 
+>Axios
+Fetch
+Superagent
+React-axios
+Use-http
+React-request
+
+ 
+=======================================================
+
+		REACT  HOOKS 
+		~~~~~~~~~~~~~~~
+
+>>  if we want ot achieve state operations using functional approach.then we use "HOOKS"
+
+>> Using setsate() method we aree goinh to achicve Hooks
+
+>> use react hook 
+
+=======================================================
+
+		AXIOS 
+                            ~~~~~~~~~~~~~	
+
+>> Const[ emplyees,SetEmployees ] =useState([])
+                   ! (setter)   nd 
+>> Functional  approach we dont have state 
+
+>> Functions uses hooks efect 
+
+>>  react js +     Axios + Springboot
+
+>>   user effect is a 
+
+
+
+
+
+
+
+
+
+

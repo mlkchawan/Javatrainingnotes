@@ -1,0 +1,116 @@
+HTML  ==input  & forms & 
+Springboot rest controller  , dev tools 
+Actuator , design rest controller 
+
+=====================  day 37 ===========================
+
+      		   SWAGGER :
+		~~~~~~~~~~~~~~~
+@Rest controller ==== spring rest or spring boot rest 
+
+@controller -==== Spring mvc
+
+Web services are for good inter operability in b/w applications 
+
+SOAP  services are used by old (aged projects ) are used and now these technology is out dated 
+
+Rest services are currently booming the industry and also soap services are conveerting into the rest ful services .
+
+webservices  url is called endpoint 
+
+swagger will do documentation for the projects 
+
+swagger also giving the visual representation 
+
+Swagger for testing ur restful services temporarily  
+
+@EnableSwagger annotation is used to enable swagger .
+=======================================================
+                                       OPEN API /SWAGGER
+		``````````````````````````````````
+		``````````````````````````````````
+OPEN API SPECIFICATIONS ::
+                                   
+OPEN API  :- Open Api Specifications are mandotory for integrity .
+
+CODEGEN : will convert the specifications into the code 
+
+codegen will not generate any business logic codes it will only creates skeleton of the project like :folder ,packages ,interfaces 
+
+OPEN API is also  giving cloud .
+
+MULESOFT RAML is the compitetor for the OPEN API SYSTEM
+=======================================================
+RESTful API is a type of web service that uses HTTP methods and URIs to interact with resources, while Open API is a specification for designing and documenting RESTful APIs.
+
+		API LIFE CYCLE 
+	         ~~~~~~~~~~~~~~~~~~~~~~
+
+
+		          ....-----develop ---test ---deployment
+		          |	
+  Requirements ----Design   |----- congigure --test ---- deployment
+		          |
+                                              .-----    publish -------------deployment
+
+=======================================================
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">  
+ 
+Inline CSS:
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+body {  
+    background-color: linen;  
+}  
+h1 {  
+    color: red;  
+    margin-left: 80px;  
+}   
+</style>  
+</head>  
+</head>  
+<body>  
+<h1>The internal style sheet is applied on this heading.</h1>  
+<p>This paragraph will not be affected.</p>  
+</body>  
+</html>
+
+=======================================================
+
+SPAN AND DIV 
+
+Span vs div 
+
+Chatbot integration 
+
+How to integrate captcha with html 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

@@ -1,0 +1,54 @@
+====================  day 48 ============================
+
+Python / groovy is used to write client side script
+
+
+ways to install JENKINS :::
+
+1. war files 
+
+2. uisng jenkin installers  
+
+3. Using Vm 
+
+4. On cloud 
+
+5. Using Docker  (  recommended version)
+
+6. any web/application servers 
+
+Winstone Servers   :- 
+
+=======================================================
+Plugins to be installed in jenkins :
+
+Maven Integration
+SonarQube Scanner
+Delivery Pipeline
+Docker
+Github
+Matrix Authorization Startegy
+Git
+Java Melody (Monitoring)
+Arifact Deployer 
+=======================================================
+	A project full process before deployment physically
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+>>>     * IDE {1} ------->>git ------>>> github ---[2}----->>Quality gate(sonar cube) {3} --------if pass------->> Build (maven)--{4}------->> deploy -----{5}------->> Tomcat server{6}.
+
+
+>>>      If failuure ------->> Jira (ticket will be raised )------> again to IDE {1} ------->>*(start from beginning again)
+
+>>  Jenkins cannot done by its own 
+
+>> plugins are power for Jenkins 
+
+>> Jenkins has trigger option for 
+
+
+
+
+
+

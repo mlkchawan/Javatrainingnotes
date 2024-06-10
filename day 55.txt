@@ -1,0 +1,103 @@
+======================= Day 51 ==========================
+
+>> Every sevre instace will have ip addreses 
+
+>> ex : 22.22.2..22.2.
+
+whwn we restrat the server instance ip address will chnag automatically in cloud . For permanent IP Address we need to use Elastic IP .Elastic Ip will never chnage even if we retsart server 
+
+EIP =====are chargable 
+
+
+
+
+docker -v
+
+sudo yum install git
+
+sudo yum install maven 
+
+sudo yum install java1.8.0 
+
+
+=======================================================
+
+Hypervisor     =======infraS
+
+Containers   :
+
+Container engine
+
+container has only one OS 
+
+it doesnt support Windows .it supports only linux  
+
+Amazon linux is what we using now 
+
+WSLT ------errors 
+
+
+Docker VS Container
+
+=======================================================
+
+		DOCKER ::
+
+>VM are heavy weight because of Hypervisor and evry app will have its own o/s.
+
+>In docker,we dint have hypervisor,we do have "Container engine.
+>Container enginer is responsible for controlling the lifecycle of container.
+
+>In docker ,Container engine is main component that is responsible to run ur app.
+
+>Docker uses "Dockerfile" to run java app.SO,evry java app shld be embedded with Docker file.
+
+>When we use docker,first we need to convert your code to image(like jar).To do this we need to build project first using docker build.
+
+>Once converted,we need to run the image,so that that image will be executed in container.Other wise without run we cann view the output.(docker run <> <>)
+ 
+docker ps---to view current running containers
+docker images---to view current images in docker
+docker run--to run an image to container
+docker build---will convert ur code to image
+ 
+>>In docker any app shld run in container ie whether it is .net,python,java.....
+>Like Maven repo,for docker,we have docker hub.
+>We can also push our own userdefined images to docker hub using docker push.
+>Docker file will not have any extension.
+file shld be like below:
+Dockerfile
+>docker stop <containerid> will stop ur running container.
+
+Docker files consists of instructions that shld be executed by your docker engine before converting to image.
+======================================================
+Ec2--->Docker---->Container(Springboot)
+ 
+Containers uses VM concepts on backend.To install docker software on Laptops or computers,we need to first install VM.
+ 
+>To install docker,we need to enable virtualization/Hyper-v at OS level.
+
+=======================================================
+
+Maven =============Build 
+Github -------------------code Reposiotory 
+AWS -----------------------
+
+Code Commit ------------Github 
+Code Build --------------Maven Build 
+code Deployment --------EC2 
+Code pipeline =========AWS
+Code quality =========Code Guru
+To store Code or any files we can also use ,Aws S3 bucket
+Aws had come up with tool kit for eclipse or for developers 
+
+using these toolkit we can push/deploy/writre /modify code directly from IDE like Eclipse Vscode intellij
+
+
+
+
+
+
+
+
+

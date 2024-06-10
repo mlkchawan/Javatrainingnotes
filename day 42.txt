@@ -1,0 +1,198 @@
+ ======================   day 42  ========================
+
+		RESPONSE CODES IN REACT .Js
+
+0: request not initialized
+1: server connection established
+2: request received
+3: processing request
+4: request finished and response is ready
+
+===============================================
+
+		DEFAULT  VALUE PARAMETERIZED
+
+function abc ( a=2){
+
+console.log(a=2)
+}
+
+abc (3)     a//3   if assigned a =3/user value
+abc()      a//2     if anot assigned then default value comes to the picture
+
+NAN    ========= is not a number
+
+=======================================================
+ 	
+		PROMISE      (Es6 feature)
+                           ~~~~~~~~~~~~~~~~~~
+whnever want to perform asynchronous action 
+by defalut js is sync 
+to make it async we are using AJAX/ PROMISE
+By async data integrity issue will raise but rectified
+
+
+
+PROMISE will  use Asycnhronous communication
+
+Asynchrounous  and Synchronous are two types of communication
+
+ A Task cannot be executed without thread .thread will have two phases -------either success or failure
+
+Promise will have two methods (Call backs )  :::
+
+Callbacks are called as function names 
+
+1) success 
+2) Failure
+
+STATES OF PROMISE ::
+~~~~~~~~~~~~~~~~~~~
+
+While a Promise object is "pending" (working), the result is undefined.
+ 
+When a Promise object is "fulfilled", the result is a value.
+ 
+When a Promise object is "rejected", the result is an error object.
+ 
+myPromise.state myPromise.result
+
+"pending"	undefined
+
+"fulfilled"	a result value
+
+"rejected"	an error object
+
+SYNTAXXX:::
+~~~~~~~~~~~~
+
+let myPromise = new Promise(function(myResolve, myReject) {
+// "Producing Code" (May take some time)
+ 
+  myResolve(); // when successful
+  myReject();  // when error
+});
+ 
+// "Consuming Code" (Must wait for a fulfilled Promise)
+myPromise.then(
+  function(value) { /* code if successful */ },
+  function(error) { /* code if some error */ }
+);
+
+
+=======================================================
+
+Observations:
+============
+1) default prameters shld not be clubbed with callbacks.
+
+2) when we want to call a function from script tag,then that script tag shld be writtened in <body>.
+
+3) callbacks shld be passed as a parameter to a function where it is necessary ie especially for network programs,db programs...etc.
+4) we used exception try catch finally blocks
+
+5)  Failure and success callabcks are called based on the condition for example operation success server responded .
+
+6) order of calling the function ie function oder in JS 
+
+=======================================================
+ 		SPREAD OPERATOR
+
+A function without name is called as anounous function 
+
+>>  in JAVA SCRIpT we want to combine multiple array objetcs /collections we use "SPREAD OPERATOR"
+
+SYNTAX :==>>>   ...<arry/variable name>
+ 
+ex:
+
+var a=[11,22,33,44];
+var b =[55,66,77];
+var d=[...a,...b]
+console.log(d);
+
+-------------------------------------------------------------------------
+ 		REST OPERATOR:
+
+ with REST OPERATOR  ::
+
+function add(...a){
+  console.log(a);
+}
+add(2,3);
+add(12,23,233,23,3,2,3);
+o/p:
+> Array [2, 3]
+> Array [12, 23, 233, 23, 3, 2, 3]
+=======
+without REST OPERATOR ::
+
+function add(a){
+  console.log(a);
+}
+add(2,3);
+add(12,23,233,23,3,2,3);
+
+op:
+ > 2
+> 12
+==============
+
+function add(...a){
+  console.log(a[1]);
+}
+add(2,3);
+add(12,23,233,23,3,2,3);
+
+> 3
+> 23
+=======================================================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Dates</h1>
+<h2>The getDate() Method</h2>
+
+<p>getDate() returns the day of the month (from 1 to 31) of a date:</p>
+
+<p id="demo"></p>
+
+<script>
+const d = new Date();
+let day = d.getDate();
+let month =d.getMonth();
+let year=d.getFullYear();
+a=month+1;
+console.log(day+"-"+a+"-"+year);
+
+document.getElementById("demo").innerHTML = year;
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

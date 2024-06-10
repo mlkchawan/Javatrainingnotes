@@ -1,0 +1,87 @@
+Title : 
+
+% good ui  welcome page ----------->> REGISTRAtion page
+
+>>in database ,dont use string for dates,note use html or js validations.use spring mvc validations
+>> registration page==========>>   login page
+succcsfuill login===> home page 
+enter train no-should be in ssamge page
+
+
+================================================================================
+  
+             RAILWAY APP 
+
+1)Welcome page--->Registration page,Login page,
+In database,dont use String for date.
+Note: dont use html or js validations.Use Spring MVC validation
+2)Registration is done---->login page
+3)After success full login---->Homepage
+4)Enter Train No----Text box-->Search option
+5)Train info shld be displayed in same Page.
+6)Place an option in same page for redirecting to "irctc.co.in" website.
+Note:Irctc shld be opened in new window.
+7)Enter source and destination-->search--->display the train list in table format.
+Use drop downlist.
+8)Add Signout with httpsessions.
+
+ 
+Note:Wednesday 5pm
+
+
+=================================       AOP   ======================================
+
+>>  AOP is not a programing language and its methodology / approach
+>>  we can use aop in combination other languages 
+>>  Spring combines withAOP ===so that the apporoach to design loosely coupled      components
+>>  in AOP main challenes is termionogies
+>>  AOP is a  middleware services .these will make simple
+>>  To overcome the rewriting of code we will create a sepaarate common class     and here developer decides where to run the code and when to run the          code.for proper operation and time wasting
+>>  AOP.config classes are in XML Config file
+
+CONCEPTS OF AOP 
+~~~~~~~~~~~~~~~~~~~~~
+>> ASPECT : Creating common class for all multiple classes
+>> JOIN POINT : A point where decides the fucntion  to execute.joint points works for only method execution 
+>>  ADICE : the action taken here is  before or after the class is performed
+>>  POINTCUT : A predicate or creating the regular expression to match the  available  concepts and execute only when needed.
+>>   In ADVICE ASPECT  IS ================ADVICE TEST
+>> POINT CUT NAME::    SELECTALL
+>>   
+==================================================================================@ POm.xml
+@Create  application coonyent.xml
+@creata a common class with ur middleare metods
+@create an aspect with class using @Aspect
+@ create test class
+==================================================================================create a simpl==
+
+
+
+
+==================================================================================
+Atomicity means either all successful or none.
+
+ Consistency ensures bringing the database from one consistent state to another consistent stat 
+
+Isolation ensures that transaction is isolated from other transaction.
+Durability means once a transaction has been committed, it will remain so, even in the event of errors, power loss etc.
+==================================================================================
+>> There are 2 types of trans
+>> Any trasn perform on one db is called ""local TRanscation""
+>>
+
+>> Collection of changes/ events that occur on db . ====is called transcation.
+
+>> Transcation should follow ACID properties.
+
+
+>> States :
+1 .Commit
+2. Rollback  ex. online payments
+
+>> Any transcation that occur on multiple dbd is called global transction.
+>> Dirty reads will raise the race condition and will may risde the number of trsncstion,
+ 
+==================================================================================
+
+Jsp---Jstl

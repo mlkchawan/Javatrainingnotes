@@ -1,0 +1,55 @@
+.   swagger 
+.   aws
+.   STS 4 aws management
+.   win x86 bit x64...
+
+
+
+=======================   day 34  ===================
+
+>> Auto reset 
+>> global sttings
+>> Live reload  ( sometimes causes browser crash)
+>>  Remote Applications 
+>>  
+
+=======================================================
+
+
+               SHEDULING IN SPRING BOOTS :
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>>  we will use shedulers .This is mainly to perform as task  based on event.
+>> Whenever an event if found tha ction should be performed .
+  {  example :      on th last working of the month arivves th monthly salary should be credited  }
+
+>>  spring boot has come with shedulers
+
+>> ALL banks uses "" Quartz shedulers "" this is market leader as of now.
+
+>> Even though springboot provides seduling capabilities we will use quartz shedulers for better output .
+
+>> we need to ass quartz libraries into springboot App.
+@Sheduler   annotation is used in springboot 
+ 
+For a instance :
+
+>> i want to send sms for every 5 minutes to indu " indu is receipt" 
+sender is "srini".
+
+>> cron rules are needed to be learn 
+
+>> shdulers has some accuracy is issue in springboot
+
+https://teams.microsoft.com/l/message/19:meeting_MzBkZWI5NTUtOGIyYS00YTI4LWIxZTUtNzRkYWM3YTUyYzk3@thread.v2/1698063020809?context=%7B%22contextType%22%3A%22chat%22%7D
+
+
+
+
+
+
+
+
+
+
+

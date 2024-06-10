@@ -1,0 +1,211 @@
+=====================  day 50 =========================
+
+
+in Jenkins 
+
+1. We cannot create roles directly 
+
+2. we cannot create bulk users at a time 
+
+3.As 1 and 2 points are bot possible we can assign permissions to users 
+but if we want to achieve we need to relay on security plugins in jenkins like  matrix Authorization Startegy 
+
+LDAP + JENKINS   [LDAP is a Server]
+
+SSO  --single sign oll   ===>> through sso we can access multiple sites using single sign in like google accnt sign to all apps like yputube ,facebook etc 
+
+Token =====this token will act as authenticator between applications 
+
+when we deal with secuirty we have to deal with AUTHORIZATION and AUTHENTICATION
+
+Every Token will have its exoiry time 
+
+Once token get expired we cannot continue with the same token need to fetch new tokens from issuer 
+
+To deisgn App using SSO ,we need to have use below tools frameworks :
+
+OAKTa framework is Industry top compitetor as of now 
+
+1.  Oauth 2.0
+2.  SAPL          [ complicated but more secure and costly ]
+3.KEBEROUS 
+4.JSoN Tokens etc
+
+
+where we use  tokens it has start and end time to it
+like having amazon prime account means we can acces amazon ,fresh ,grocierires
+
+
+ROLE BASED  AUTHORIZATION STFRATEGY :
+
+
+BY  Default will act as  master node. MAStER will have a original data 
+
+In projecs devops engineer creates acluster for jenkins
+
+cluster means it is agroup of machine /servers/terminals /node reate 
+
+to Create a ckuster we need to have atlest ine manchine.
+
+{HP}
+=======>>
+
+
+=======================================================
+
+
+		AWS  CLOUD 
+	         ~~~~~~~~~~~~~~~~~~~
+
+why ?
+
+
+
+AWS provides cloud Computing services .
+
+
+
+IAM : Identity Access Management 
+
+From IAM we create users ,and also create or delete policies ,roles ,creation,assigning roles , assign polices,delete,role creation,assigning roles,Password rules creation,passsword settings,aws user creation reports
+
+
+
+
+		EC2
+
+Elastic Cloud Computing ----EC2
+
+AMI ----Amazon Machine Image 
+
+Aws had modified existing opensource operating systems and released into the market as AMI
+
+AWS linux AMi 
+
+AWS need to learn Linux 
+
+VM-----interent is mandatory ,IP Addres is also ,port no: , Storage ,Security 
+
+To perform any operations on cloud are we need to have atleast  one VPC.
+
+VPC gives  below :
+
+1. IP Address assigining 
+
+2. Routing to right node 
+
+3.port no 
+
+4.subnet address
+
+5.security rules/firewalls ....etc
+
+Inbound -------------Outbound 
+
+123.45.66.77
+
+> Every Protocal in networking will have port no 
+
+htpp = ==8080
+https====84443
+FTP =====
+SMTP =====
+AFTP ======
+POP  =======
+
+
+To access any VM from any cloud we can follow below ways
+
+1. using browser 
+
+2. using putty /putty gentools 
+
+3. using AWS API
+
+4.using AWS CLI
+
+=======================================================
+
+EC2/EBS/Code commit ,code ,build
+
+
+EBS ====stands for Elastic block store 
+
+want to install jenkins on AWS EC2
+
+
+frontend ------EBS
+
+backend in ----- Docker 
+
+Database ------ AWS mysql server
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

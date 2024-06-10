@@ -1,0 +1,75 @@
+========================  day 49 ========================
+  
+		DevOps 
+		~~~~~~
+
+>>  Jenkins is a  CI/CD server 
+
+>>  Ansible is a tool for using 
+
+Follow of project before going to production state :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Eclipse ==>> Git =======>> GitHub ======>> Jenkins ====>> Build====>> testing =======>> deploy 
+
+
+code===DEv====Preprod ---------production 
+
+=======================================================
+
+>>Right click on project ===>  teams ==> share poject====> enable checkbox==>> finish
+
+>> teams =====> commit===move to unstaged to staged ===>>message (commit1)====>> commit option
+
+
+jenkins ===manage plugins ====>> global tool  configuration ===> Add JDK ====JDK1.8   path ==>> "loaction ofjdk "  and  add MAven ==>> maven 3 path=="loc from your pc" ===>> save 
+
+>> Make little changes in project and and ===>>> teams =====> commit===move to unstaged to staged ===>>message (commit1)====>> commit push option ==> give user name and "token password".
+   
+
+jenkins dashbord  ===>New item name ==> maven==> ok ====> maven project location ===> goal and option ==>type "" clean install =====>> save 
+
+
+
+=======================================================
+
+>>  git is a version controlling system used for code repository
+>> in projects,we shld create local repository and commit our code.
+>> once commited,we need to push
+ 
+ 
+>> git is local repo.it will exist in our sys
+>>  git is cloud repo.it will exist in cloud
+
+>>  when we 
+
+>>  git add
+
+>> from git want to push data to repo   then ====>> git 
+
+>>  Git any operation is performed is pushed into  branches  there are two branches like : Main branch and Master branch ==>>
+`
+
+
+>>   D:\Gittask>git init
+
+>>D:\Gittask>git add *
+
+>>D:\Gittask>git commit -m "commit1"
+
+>> cls 
+
+>> D:\Gittask>git status
+
+>>D:\Gittask>git log ====> shows how many times we have commited
+
+>>D:\Gittask>git checkout dev  ===>> to switch to another branches
+
+
+
+
+
+
+
+
+>> gid add * 

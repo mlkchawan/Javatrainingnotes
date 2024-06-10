@@ -1,0 +1,19 @@
+explore atomic datatypes   --to count number of hits to the website
+JMeter  ----eplore it .basically it is used for load testing/network/database testing
+====================================  Day 20     ===================================
+
+ConnectionPooling :
+~~~~~~~~~~~~~~~~~~
+>>   means grouping together.
+>>   ConnectionPooling will be done by client provided libarary like : hikari,c3po etc
+>>   Resource management
+>>   
+>>   overhead opening and closing of servlets
+>>   Data Source is mandotory 
+
+Steps:
+
+1) . Add hikari dependency to pom.xml
+2)create a Hikariconfig object and provide necessary metadata.
+3)pass config as parameter to datasource.
+
