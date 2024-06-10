@@ -1,0 +1,221 @@
+package com.infinite.log4example;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+public class CompanyDataEncry {
+	
+
+		private static final Logger logger = Logger.getLogger(CompanyDataEncry.class);
+		
+		public static void main(String[] arg) throws IOException {
+			Connection on = null;
+			PropertyConfigurator.configure("log4j.properties");
+		try {
+			FileReader fr=new FileReader("mysql.properties");
+			Properties pr =new Properties();
+			pr.load(fr);
+			
+			Class.forName("com.mysql.jdbc.Driver"); // loading the drivers
+			on = DriverManager.getConnection("jdbc:mysql://localhost:3306/training",Companyget.decrypt(pr.getProperty("username"),"boot123"),Companyget.decrypt(pr.getProperty("password"),"boot456"));
+			logger.info("Connection established to database");
+
+			
+			 Scanner s = new Scanner(System.in);
+			 PreparedStatement ps=on.prepareStatement("insert into company values(?,?,?,?,?)");
+			 logger.info("companyname");
+			 ps.setString(1,s.next());
+			 logger.info("address");
+			 ps.setInt(2,s.nextInt());
+			 logger.info("country");
+			 ps.setString(3,s.next());	
+			 logger.info("NO_of_employees");
+			 ps.setInt(4,s.nextInt());
+			 logger.info(" status");
+			 ps.setString(5,s.next());
+			 int status = ps.executeUpdate();
+			 if (status==1)
+				 logger.info("record inserted successfully");
+			 else
+				 logger.info("record insertion fail");
+			/* ResultSet st = ps.executeQuery("select *from company");
+				while (st.next()) {
+					logger.info(st.getString(1)+" ");
+					logger.info(st.getInt(2));
+					logger.info(st.getString(3));
+					logger.info(st.getInt(4));
+					logger.info(st.getString(5));
+				*/
+				}
+			catch (SQLException e1) {
+				logger.error(e1);
+			}
+
+			catch (ClassNotFoundException e) {
+				logger.error(e);
+			} 
+			finally {
+				try {
+
+				on.close();
+				} catch (Exception e1) {
+					logger.error(e1);
+
+				}
+			}
+
+		}
+	}
+
+
+
+
+
+=========
+
+package com.infinite.log4example;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+public class Example1 {
+	
+	private static final Logger logger = Logger.getLogger(Example1.class);
+	{
+		logger.info("unanamed Block");
+	}
+	public static void display(){
+		logger.info("hi from display");
+	}
+	public void displaynonstatic(){
+		try{
+			int a=1/0;
+			
+		}
+		catch (Exception e){
+			logger.error("display non static");
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		/*PropertyConfigurator.configure("log4j.properties");
+		logger.info("hi Hello World");
+		logger.warn("Pls dont use");
+		logger.error("Heap error occured");
+		logger.fatal("errror occured");*/
+		
+		PropertyConfigurator.configure("log4j.properties");
+		Example1.display();
+		Example1 obj=new Example1();
+		obj.displaynonstatic();
+		
+
+		
+	}
+}
+====
+package com.infinite.beans;
+
+import java.util.Date;
+
+public class User {
+	private String usernmae;
+	private String password;
+	private Date logindate;
+	
+	public String getUsernmae() {
+		return usernmae;
+	}
+	public void setUsernmae(String usernmae) {
+		this.usernmae = usernmae;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public Date getLogindate() {
+		return logindate;
+	}
+	public void setLogindate(Date logindate) {
+		this.logindate = logindate;
+	}
+	public void display(){
+		System.out.println(usernmae+"  "+password);
+		System.out.println(logindate);
+		
+	}
+	
+	
+	
+
+}
+
+=====
+package com.infinite.beans;
+import com.infinite.beans.*;
+
+import java.util.Date;
+public class BeanTest {
+	public static void main(String...wrg){
+		User chawan=new User();
+		chawan.setUsernmae("chawann");
+		chawan.setPassword("chawan758487");
+		chawan.setLogindate(new Date());
+		chawan.display();
+		System.out.println(chawan.getUsernmae());
+	}
+
+}
+==
+package com.infinite.log4example;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+public class Example1 {
+	
+	private static final Logger logger = Logger.getLogger(Example1.class);
+	{
+		logger.info("unanamed Block");
+	}
+	public static void display(){
+		logger.info("hi from display");
+	}
+	public void displaynonstatic(){
+		try{
+			int a=1/0;
+			
+		}
+		catch (Exception e){
+			logger.error("display non static");
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		/*PropertyConfigurator.configure("log4j.properties");
+		logger.info("hi Hello World");
+		logger.warn("Pls dont use");
+		logger.error("Heap error occured");
+		logger.fatal("errror occured");*/
+		
+		PropertyConfigurator.configure("log4j.properties");
+		Example1.display();
+		Example1 obj=new Example1();
+		obj.displaynonstatic();
+		
+
+		
+	}
+}
+

@@ -1,0 +1,750 @@
+import React from "react";
+import ChatBot from 'react-simple-chatbot';
+
+function App() {
+  const steps=[
+    {
+      id:'Greet',
+      message:'Hello,Welcome to our Website',
+      trigger:'Ask Name'
+    },
+    {
+      id:'Ask Name',
+      message:'Please enter your Name',
+      trigger:'waiting1'
+    },
+    {
+      id:'waiting1',
+      user:true,
+      trigger:'Name'
+    },
+    {
+      id:'Name',
+      message:'HI {previousValue},Please May i know how can i help you?',
+      trigger:'issues'
+    },
+    {
+      id:'issues',
+      options:[{ value:"React",label:'React',trigger:"React"},
+    { value:"Angular",label:'Angular',trigger:"Angular"}],      
+    },
+    {
+      id:'React',
+      message:'Thanks for isssue',
+      end:true
+    },
+    {
+      id:'Angular',
+      message:'Thanks for issue1',
+      end:true
+
+    }
+  ]
+  return (
+    <div>
+      <ChatBot steps={steps}  floating={true}> </ChatBot>
+        </div>
+  );
+  
+}
+
+export default App;
+======================================-=====================================================
+npm install react-simple-chatbot --save
+
+npm install react-simple-chatbot styled-components --save
+import ChatBot from 'react-simple-chatbot';
+
+=================================================
+
+import React from "react";
+import ChatBot from 'react-simple-chatbot';
+
+function App() {
+ 
+  
+    return (
+    <div >
+      <ChatBot const steps={[
+    {
+      id:'Greet',
+      message:'Hello,Welcome to our Website',
+      trigger:'Ask Name'
+    },
+    {
+      id:'Ask Name',
+      message:'Please enter your Name',
+      trigger:'waiting1'
+    },
+    {
+      id:'waiting1',
+      user:true,
+      trigger:'Name'
+    },
+    {
+      id:'Name',
+      message:'HI {previousValue},Please select your issue',
+      trigger:'issues'
+    },
+    {
+      id:'issues',
+      options:[{ value:"React",label:'React',trigger:"React"},
+    { value:"Angular",label:'Angular',trigger:"Angular"}],      
+    },
+    {
+      id:'React',
+      message:'Thanks for isssue',
+      end:true
+    },
+    {
+      id:'Angular',
+      message:'Thanks for issue1',
+      end:true
+
+    }]}
+  floating={true}
+/>
+
+    </div>
+  );
+  
+}
+
+export default App;
+
+
+[][][][][][]][][][][[][][][][][[[[[[]]]][[[[[[[[[[[[]][[[[[[[[[[[[[[[[[[[[[[[[[[[
+
+
+<div class="px-12 mx-auto max-w-7xl">
+        <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
+            <h1 class="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+                <span class="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline">Customer Relationship Management System</span> <span></span>
+            </h1>
+            <p class="px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24">
+                CRM is your GPS to a better route on your Business Development journey.
+            </p>
+        </div>
+        <section class="pt-2 bg-white">
+
+            <div class="px-12 mx-auto max-w-7xl">
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ flex: 1, }}>
+                        {/* Your text content goes here */}
+                        <img src="https://business.adobe.com/blog/basics/media_17055ed6e8e377d61c06d178add8e2aa8239669ca.png?width=750&format=png&optimize=medium" alt="Description" style={{ maxWidth: '100%', height: '300px', borderRadius: '8px' }} />
+                    </div>
+                    <div style={{ flex: 1, }}>
+                        {/* Your image goes here */}
+                        <center><h2><b>Customer Relationship Management System</b></h2><p>A customer management system describes the specialist software that can empower companies by streamlining and automatically carrying out the processes involved in payroll such as working out take home pay and taxes – saving time for the employer and reducing the number of errors.</p></center>
+                    </div>
+                </div><br></br>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ flex: 1, }}>
+                        {/* Your image goes here */}
+                        <center>
+                            <h2><b>Health Care </b></h2>
+                            <br></br>
+                            <p><b>Seamlessly delivering end-to-end digital health experiences</b></p>
+                            <br></br><p>The future of healthcare is in digitally reimagined experiences for patients and caregivers alike. Digitalization offers increased choice and convenience for patients, and improved outcomes for caregivers while reducing costs and workloads.</p></center>
+                    </div>
+                    <div style={{ flex: 1, }}>
+                        {/* Your text content goes here */}
+                        <img src="https://blogimages.softwaresuggest.com/blog/wp-content/uploads/2023/05/26183951/CRM-Insurance-Software-A-Complete-Guide-in-2023.jpg" alt="Description" style={{ maxWidth: '100%', height: '300px', borderRadius: '8px' }} />
+                    </div>
+
+                </div><br></br>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ flex: 1, }}>
+                        {/* Your text content goes here */}
+                        <img src="https://www.cxtoday.com/wp-content/uploads/2022/01/CRM-101-Customer-Relationship-Management.jpeg" alt="Description" style={{ maxWidth: '100%', height: '300px', borderRadius: '8px' }} />
+
+                    </div>
+                    <div style={{ flex: 1, }}>
+                        {/* Your image goes here */}
+                       
+                        <center><h2><b>Banking & Finance</b></h2><b><p>Driving transformation with our banking, financial services, insurance, and payments experts.</p></b><p>We help Financial Services companies meet rapidly changing customer expectations, exploit disruptive business models and new technologies, become more efficient and resilient, and navigate uncertainty, risks and regulations.
+
+                            We deliver this with our “NextGen” services which are unshackled from legacy thinking, processes or mindsets and achieves full stack transformation with Domain, Digital, Experience Design, DevOps, Platforms and AI/ML.</p></center>
+                    </div>
+                </div><br></br>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ flex: 1, }}>
+                        {/* Your image goes here */}
+                        <center>
+                            <h2><b>Telecom</b></h2>
+                            <br></br>
+                            <p><b>TELECOM
+                                Next-gen digital platforms and differentiated offerings for 5G technologies</b></p>
+                            <br></br><p>If you’re looking for a trusted and reliable partner for your telecom IT services, look no further. We are uniquely aligned to serve our telecom domain customers as a strategic transformational partner through exclusive focus on Next-gen digital platforms and differentiated offerings for 5G technologies.</p></center>
+                    </div>
+                    <div style={{ flex: 1, }}>
+                        {/* Your text content goes here */}
+                        <img src="https://wp.static-cdn-shsp.com/wp-content/uploads/2020/08/shutterstock_444276529-scaled.jpg" alt="Description" style={{ maxWidth: '100%', height: '300px', borderRadius: '8px' }} />
+                    </div>
+                </div><br></br>
+            </div>
+
+        </section>
+    </div>
+==================================================
+
+<div class="container my-24 px-6 mx-auto">
+
+
+<section class="mb-32 text-gray-800 text-center">
+
+  <h2 class="text-3xl font-bold mb-12 pb-4 text-center">Latest articles</h2>
+
+  <div class="grid lg:grid-cols-3 gap-6 xl:gap-x-12">
+    <div class="mb-6 lg:mb-0">
+      <div class="relative block bg-white rounded-lg shadow-lg">
+        <div class="flex">
+          <div
+            class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
+            data-mdb-ripple="true" data-mdb-ripple-color="light">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/024.webp" class="w-full" />
+            <a href="#!">
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                ></div>
+            </a>
+          </div>
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">My paradise</h5>
+          <p class="text-gray-500 mb-4">
+            <small>Published <u>13.01.2022</u> by
+              <a href="" class="text-gray-900">Anna Maria Doe</a></small>
+          </p>
+          <p class="mb-4 pb-2">
+            Ut pretium ultricies dignissim. Sed sit amet mi eget urna
+            placerat vulputate. Ut vulputate est non quam dignissim
+            elementum. Donec a ullamcorper diam.
+          </p>
+          <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
+            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read
+            more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-6 lg:mb-0">
+      <div class="relative block bg-white rounded-lg shadow-lg">
+        <div class="flex">
+          <div
+            class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
+            data-mdb-ripple="true" data-mdb-ripple-color="light">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/031.webp" class="w-full" />
+            <a href="#!">
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+               ></div>
+            </a>
+          </div>
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Travel to Italy</h5>
+          <p class="text-gray-500 mb-4">
+            <small>Published <u>12.01.2022</u> by
+              <a href="" class="text-gray-900">Halley Frank</a></small>
+          </p>
+          <p class="mb-4 pb-2">
+            Suspendisse in volutpat massa. Nulla facilisi. Sed aliquet
+            diam orci, nec ornare metus semper sed. Integer volutpat
+            ornare erat sit amet rutrum.
+          </p>
+          <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
+            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read
+            more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-0">
+      <div class="relative block bg-white rounded-lg shadow-lg">
+        <div class="flex">
+          <div
+            class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
+            data-mdb-ripple="true" data-mdb-ripple-color="light">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/081.webp" class="w-full" />
+            <a href="#!">
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                ></div>
+            </a>
+          </div>
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Chasing the sun</h5>
+          <p class="text-gray-500 mb-4">
+            <small>Published <u>10.01.2022</u> by
+              <a href="" class="text-gray-900">Joe Svan</a></small>
+          </p>
+          <p class="mb-4 pb-2">
+            Curabitur tristique, mi a mollis sagittis, metus felis mattis
+            arcu, non vehicula nisl dui quis diam. Mauris ut risus eget
+            massa volutpat feugiat. Donec.
+          </p>
+          <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
+            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read
+            more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+=====================================================
+class="px-8 border-b md:shadow-lg flex-no-wrap fixed top-0 flex w-full items-center justify-between bg-[#FBFBFB] py-1 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start"
+
+
+
+class="z-10 fixed top-0 flex-no-wrap flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4
+===================================================
+
+   nav    class="z-10 fixed top-0 flex-no-wrap flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4">
+
+========================================================
+
+         <button type="submit" class="h-10 px-5 m-12 text-indigo-100 transition-colors duration-150 bg-blue-500 rounded-lg focus:shadow-outline hover:bg-indigo-800" onClick={handleClickRegister}>
+                                        Register New User
+                                    </button>
+
+
+
+================================================
+
+  <div class="container mx-auto mb-16">
+                <div class="grid grid-cols-2 md:grid-cols-1 gap-1">
+                    <div
+                        class="block rounded-lg bg-white shadow-[0] dark:bg-neutral-700">
+                        <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+                            <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/textures/small/1.jpg" alt="" />
+                            <a href="#!">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-70">
+                                Are you ready?
+                            </h5>
+                            <p class="mb-45 text-base text-neutral-600 dark:text-neutral-200">
+                                A great adventure is ahead of us! Get ready for a fascinating journey into the world of web design 🚀
+                            </p>
+                            <button type="button"
+                                class="inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200">
+                                Count me in!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+                    <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/textures/small/103.jpg" alt="" />
+                    <a href="#!">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                        </div>
+                    </a>
+                </div>
+                <div class="p-6">
+                    <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                        UI and UX
+                    </h5>
+                    <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                        We will explore the unknown lands of creating great interfaces and designing the perfect user experience
+                    </p>
+                    <button type="button"
+                        class="inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200">
+                        Oh, I want it too
+                    </button>
+                </div>
+            </div>
+            <div
+                class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+                    <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/textures/small/56.jpg" alt="" />
+                    <a href="#!">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                        </div>
+                    </a>
+                </div>
+                <div class="p-6">
+                    <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                        Future of web dev
+                    </h5>
+                    <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                        You know the saying that the future is today? There is no need to delay, let's start our journey
+                    </p>
+
+                    <button type="button"
+                        class="inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-00 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200">
+                        Let's start!
+                    </button>
+                </div>
+            </div>
+
+----------================================================
+
+
+teams :
+
+
+  
+            <div class="container mx-auto px-10 md:px-1 xl:px-32">
+                <div class="mb-12 text-center">
+                    <h2 class="mb-2 text-center text-2xl text-gray-900 font-bold md:text-4xl">Admin Team</h2>
+                    <p class="text-gray-600 lg:w-8/12 lg:mx-auto">Customer relationship management (CRM) is a technology for managing all your company's relationships and interactions with customers and potential customers.</p>
+                </div>
+                <table cellPadding={30} align="center">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="space-y- text-center">
+                                    <img class="w-74 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+                                    src="https://media.licdn.com/dms/image/C5603AQHryGE-W7vSnA/profile-displayphoto-shrink_800_800/0/1640177063034?e=2147483647&v=beta&t=7OSMGMGKBMjWKs14cej8wgqkO9pxgmmS7xfgotz9I-s" alt="woman" loading="lazy" width="640" height="805" />
+                                    <div>
+                                        <h4 class="text-2xl">Vasanthi Sirikonda</h4>
+                                        <span class="block text-sm text-gray-500">CEO-Founder</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                {/* <div class="space-y-4 text-center">
+                                    <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80"
+                                    src="https://tailus.io/sources/blocks/classic/preview/images/man.jpg" alt="women" loading="lazy" width="1000" height="667" />
+                                    <div>
+                                        <h4 class="text-2xl">Sudheshna Bandari</h4>
+                                        <span class="block text-sm text-gray-500">Chief Technical Officer</span>
+                                    </div>
+                                </div> */}
+                            </td>
+                            <td>
+                                {/* <div class="space-y-4 text-center">
+                                    <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+                                    src="https://media.licdn.com/dms/image/C5603AQFdmB-M0CYrWw/profile-displayphoto-shrink_800_800/0/1628178070507?e=2147483647&v=beta&t=OrBQSkzpokicOJAgxsP2haXM12-hLwI-YdLx4xpXJKE" alt="woman" loading="lazy" width="1000" height="667" />
+                                    <div>
+                                        <h4 class="text-2xl">Swetha Mohana Susarla</h4>
+                                        <span class="block text-sm text-gray-500">Chief Operations Officer</span>
+                                    </div>
+                                </div> */}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="space-y-4 text-center">
+                                    <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+                                    src="https://media.licdn.com/dms/image/C5603AQFdmB-M0CYrWw/profile-displayphoto-shrink_800_800/0/1628178070507?e=2147483647&v=beta&t=OrBQSkzpokicOJAgxsP2haXM12-hLwI-YdLx4xpXJKE" alt="woman" loading="lazy" width="1000" height="667" />
+                                    <div>
+                                        <h4 class="text-2xl">Swetha Mohana Susarla</h4>
+                                        <span class="block text-sm text-gray-500">Chief Operations Officer</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="space-y-4 text-center">
+                                    <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+                                    src="https://media.licdn.com/dms/image/C5603AQFdmB-M0CYrWw/profile-displayphoto-shrink_800_800/0/1628178070507?e=2147483647&v=beta&t=OrBQSkzpokicOJAgxsP2haXM12-hLwI-YdLx4xpXJKE" alt="woman" loading="lazy" width="1000" height="667" />  
+                                    <div>
+                                        <h4 class="text-2xl">Swetha Mohana Susarla</h4>
+                                        <span class="block text-sm text-gray-500">Chief Operations Officer</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                {/* <div class="grid gap-10 items-center md:grid-cols-3">
+                    
+                    
+                    
+                    
+                    </div>
+                    <div class="space-y-4 text-center">
+                        <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+                            src="https://media.licdn.com/dms/image/C5603AQFdmB-M0CYrWw/profile-displayphoto-shrink_800_800/0/1628178070507?e=2147483647&v=beta&t=OrBQSkzpokicOJAgxsP2haXM12-hLwI-YdLx4xpXJKE" alt="woman" loading="lazy" width="1000" height="667" />
+                        <div>
+                            <h4 class="text-2xl">Swetha Mohana Susarla</h4>
+                            <span class="block text-sm text-gray-500">Chief Operations Officer</span>
+                        </div>
+                    </div>
+                </div> */}
+            </div>
+=======================================================
+
+"react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+================================================
+
+import React from "react";
+import { useNavigate } from "react-router-dom";
+const Login = () => {
+    const navigate = useNavigate();
+    const handleClickb = () => navigate('/');
+    const handleClickadmin = () => navigate('/AdminHome');
+    const handleClickadminforget=()=>navigate('/')
+ 
+    return (
+        <div>
+        <div>
+        <button type="submit"  class="w px-5 py-2 text-sm font-end tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-red-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-10"onClick={handleClickb}>
+                                   <b>BACK</b> 
+                                </button>
+
+        </div >
+        <section class="bg-white dark:bg-gray-900 ">
+            <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
+                <h1 class="mb-1 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+                    <span class="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline">Customer Relationship Management</span>
+                </h1>
+                <p class="px-0 mb-1 text-lg text-gray-600 md:text-xl lg:px-16">
+                helps optimize sales workflows, automate marketing campaigns, streamline reporting and gain insights into customer behavior
+                </p>
+            </div>
+          <center>
+            <div class="container mx-auto">
+                <div class="lg:flex lg:items-center lg:mx-9">
+                    <div class="mt-98 lg:w-1/2 lg:mx-">
+                        <div
+                            class="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
+                            <h1 class="text-lg font-medium text-gray-700">Admin Login</h1>
+ 
+                            <form class="mt-6">
+                                <div class="flex-1">
+                                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">UserName</label>
+                                    <input type="text" placeholder="Enter your Username" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                </div>
+ 
+                                <div class="flex-1 mt-6">
+                                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Password</label>
+                                    <input type="password" placeholder="Enter your password." class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                </div>
+ 
+                                <button type="submit" class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" onClick={handleClickadmin}>
+                                    Login
+                                </button>
+                
+                                <button type="submit" class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" onClick={handleClickadminforget}>
+                                    Forgot Password
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            </center>
+        </section>
+        </div>
+    )
+}
+ 
+export default Login;
+=======================================================
+
+register:   
+
+
+import React from "react";
+import { useNavigate } from "react-router-dom";
+const Login = () => {
+    const navigate = useNavigate();
+    const handleClick = () => navigate('/home');
+    const handleClickb = () => navigate('/');
+    const handleClickadminforget = () => navigate('/')
+
+    return (
+        <div>
+            <div>
+                <button type="submit" class="w px-5 py-2 text-sm font-end tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-400 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-10" onClick={handleClickb}>
+                    <b>BACK</b>
+                </button>
+
+            </div>
+            <section class="bg-white dark:bg-gray-900">
+                <div class="w-full mx-auto text-left  xl:w-9/12 md:text-center">
+                    <h1 class="mb-1 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+                        <span class="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline">Customer Relationship Management</span>
+                    </h1>
+                    <p class="px-0 mb-1 text-lg text-gray-600 md:text-xl lg:px-16">
+                        helps optimize sales workflows, automate marketing campaigns, streamline reporting and gain insights into customer behavior
+                    </p>
+                </div>
+                <div class="container px-6 mx-auto">
+                    <div class="lg:flex lg:items-center lg:-mx-6">
+                        <div class=" lg:w-1/2 lg:mx-6">
+                            <div
+                                class="w-full px-8 py-1 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
+                                <h1 class="text-lg font-medium text-gray-700">User Login</h1>
+
+                                <form class="mt-6">
+                                    <div class="flex-1">
+                                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">UserName</label>
+                                        <input type="text" placeholder="Enter your Username" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    </div>
+
+                                    <div class="flex-1 mt-6">
+                                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Password</label>
+                                        <input type="password" placeholder="Enter your password." class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    </div>
+
+                                    <button type="submit" class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" onClick={handleClick}>
+                                        Login
+                                    </button>
+
+                                    <button type="submit" class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" onClick={handleClickadminforget}>
+                                        Forgot password
+                                    </button >
+
+                           
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <center></center>
+            </section>
+        </div>
+
+    )
+}
+
+export default Login;
+
+=====================================================
+
+
+import axios from "axios";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+ 
+export default function Register() {
+  let navigate = useNavigate();
+  const handleClickb = () => navigate('/');
+ 
+    
+
+ 
+  const [user, setUser] = useState({
+    name: "",
+    username:"",
+    phonenumber:"",
+    email: "",
+    password: "",
+    
+  });
+ 
+  const { name, username,phonenumber,email,password } = user;
+ 
+  const onInputChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+ 
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    await axios.post("http://localhost:8080/api/n1/user", user);
+    navigate("/login");
+  };
+ 
+  return (
+    <div class="block text-sm font-medium leading-6 text-gray-900" >
+    <div>
+    <button type="submit"  class="w px-5 py-2 text-sm font-end tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-400 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-10"onClick={handleClickb}>
+                               <b>BACK</b> 
+                            </button>
+
+    </div>
+    <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
+      <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
+        <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
+        <h1 class="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+                <span class="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline">Register Here</span>
+            </h1>
+          <form onSubmit={(e) => onSubmit(e)}>
+            <div >
+              <label htmlFor="Name" class="block mb-2 text-sm text-gray-600 dark:text-gray-200" >
+                Name
+              </label>
+              <input
+                type={"text"}
+                className="form-control"
+                placeholder="Enter your name"
+                name="name"
+                value={name}
+                onChange={(e) => onInputChange(e)}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="password" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+              username
+              </label>
+              <input
+                type={"text"}
+                className="form-control"
+                placeholder="Enter your password"
+                name="username"
+                value={username}
+                onChange={(e) => onInputChange(e)}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="Email" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                Phonenumber
+              </label>
+              <input
+                type={"number"}
+                className="form-control"
+                placeholder="Enter your e-mail address"
+                name="phonenumber"
+                value={phonenumber}
+                onChange={(e) => onInputChange(e)}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="Email" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                E-mail
+              </label>
+              <input
+                type={"text"}
+                className="form-control"
+                placeholder="Enter your e-mail address"
+                name="email"
+                value={email}
+                onChange={(e) => onInputChange(e)}
+              />
+            </div>
+            <label htmlFor="Email" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+              Password
+              </label>
+              <input
+                type={"text"}
+                className="form-control"
+                placeholder="Enter your password"
+                name="password"
+                value={password}
+                onChange={(e) => onInputChange(e)}
+              />
+            <div>
+            <button type="submit" class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+              Submit
+            </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  );
+
+  }
+
+
+
+

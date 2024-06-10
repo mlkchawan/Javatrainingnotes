@@ -1,0 +1,64 @@
+jrocket kit ,op
+
+elk stack ,.new relic ,app dynamic.sentry  etc = for realtime application usage
+
+jvm - bytecode to machine code 
+jre - resposible for execution
+jdk - the development kit that includes jre, compiler and a debugger includes all of these
+ 
+byte code - its a combinantion of 1 '0 and special characters 
+
+can we converet the byte code to source code ? yes we can by using java decomplier software
+can we converet the source code to byte code ? yes using jdk 
+
+write code and save in .java format
+using javac, it going to compile the source code and byte code is genenrated 
+if any errors in code ,execution will stop and byte code will not be genarated .
+byte code willbe in .class format 
+
+>> java doesnt supports pointers but it uses internally
+
+class loader 3 types - bootstrap loader, extension loadder, application loader
+boot strap loader is for loading the data for execution which are not provided by java 
+extension loader is for using third party libraries 
+
+https://docs.oracle.com/javase/8/docs/api/  == 
+https://jcp.org/ -- link for jsr 
+
+
+zip files
+
+jse ==jar jar archieve .jar extension 
+jee == ear enterprise archieve
+web appli === war (web archieve) cinsisits of class files,html/csss/js/jsp/servlets/web.xml
+
+jar cinsisits of class files and MANSIFEST.mf file==> is a configura 
+
+java supports functional and oops object oriented programming synopsis language approaches
+functional approach programming 
+int a,b,c=90;
+
+
+
+write a Java program for comparing 3 variablees.
+a=90 b=890 c=78
+
+ 
+
+display highest and lowest varaible
+
+ 
+
+Task2:
+write a Java program for below requirement:
+a=0 b=10
+
+ 
+
+ 
+
+if a and b value is between 0 and 10,diplay message as "Single Digit Number".
+
+
+
+ 

@@ -1,0 +1,119 @@
+==========================  DAY 6  J D B C ======================================== 
+
+JDBC----Day 6 tille tommrow afternoon 
+
+Day7/8---Servlets 
+
+Day9—JSP 
+
+Day 10---JSP+JDBC or Servlets+JDBC or Servlets +JSP+HTML(integrations and do and dont's in JSPS and servlets) 
+
+ 
+================================================================================
+To connect the server to the ms sql database 
+
+Go to run command  
+
+Search for mysql  crient server; 
+===============================================================================
+
+Whenever we couldn’t able to connect sql to  and trouble shooting 
+
+Services.mcs and  
+
+>> what is API ?
+
+API stands for application program interface .an apicombined classes,interfaces methods designed for a specific purpose
+
+>> Every API has some set of rules defind.'
+
+mainly used for connecting/communicate  two different item /terminals/pc/machines or applications
+
+>> mainly API are 2 types
+1.  predefind  (vendor)
+
+2.  userdefined
+
+APP1 ------------------APP2
+communicate with each other by " API calls" on the backend.
+
+>> ========================jDBC ==================================================
+
+java database connectivity (JDBC).
+>>
+>> JDBC gives us API that can acceses any kind of RDBMS databse
+>> i want to save /persist connect data to backend from frontend,then i can use JDBC.
+ RDMBS database :oracle, mysql,dd2.post gress......
+>> To design any app using jdbc we need to have below s/sw
+1 data base my sql
+2. data source
+3. JDBC API
+4. Database tables -we are going to create
+
+>> Employee table---->fullname,idno,department
+
+==================================================================
+>>create database training; == to create data base
+
+>> show databases; === for showing databases
+
+>> use training; == for using dataset
+               !
+             we defined that name;s
+>>  create table employee(fullname char(50),idno number,department char(80));
+                   !
+                  column name
+
+>>  show tables; == for viewing the table created 
+>> desc table employee; ==== for all details of tables;
+===========================================================================
+
+>> Eclipse + tomcat 8.5 Integration is done
+>>> JDBC is an API to connect to backend database/ systems.
+
+
+>> ODBC---->>> JDBC------>>> JPA (HIbernet)
+>>> JPS internally uses jdbc technology.
+
+>> ODBC ---> stands for open database Connectivity
+>> ODBC is a old Technology which is designed using C++/c because of this platform depedent
+>> odbc is mainly used for microsoft technologies like microsoft access,excel,wordpad etc..
+>> odbc wont support remote databases.
+
+>> only browser knows ho to interacct with server . No other component is 
+>> Browser will perform HTTP/HTTPS respnoses protocols.
+>> In browser we are going to give URL of the website
+>> Browser--->Type ur URL--->click hit button----->As sson as i click next--->http request
+   will be created and will be forwared to DNS server--->from there request will be
+   redirected to Microserver server---->it will check whether username is valid by interacting 
+   with microsoftdatabase---->if record is available/unavailable gives response to
+   server---->filter----->browser
+
+>>>> ****************************   REQUEST RESPONSE ARCHITECTURE ***************************
+
+>> from java application , i want to push my data into dataabase.
+>> in JDBC we have 4 drivers,
+
+>> A driver is a software written in any language and converts from one form to another form
+>> 
+
+========================================================
+
+TASK READY ABOUT THE DRIVERS 
+
+https://github.com/kolaparthi34k/Infinite_JavaBackend/tree/main/Jdbc
+
+=========================================================
+
+>> IN JDBC we use java.sql and java.sqxl packages,
+
+X stands for latest package/upgraded package from oracle
+
+===============================================================
+
+<<< DB Connection Pooling    >>>
+
+>>> heavy weight means --->> more memory & CPU
+>>> LIGHT weight means --->> less memory and less CPU
+>> DB connection is a heavy weight .we should know how to utilized db resources
+   properly.

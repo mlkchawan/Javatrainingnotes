@@ -1,0 +1,140 @@
+====================    DAY 8   === =========================================
+
+Drawbacks of connection bulilding :
+
+1)Make the values insert at runtime.
+
+2)connection closing shld be in final.Final will run irrespective of exceptions in the  code.
+
+3)Not portable
+
+4)password shld not disclosed in code.
+
+5)driver class,url and passwords should be dynamic.
+============================================================================
+1)  Make the values insert at runtime.
+>>> Solution)Use PreparedStatement
+
+2)  connection closing shld be in final.Final will run irrespective of       exceptions in the  code.
+>>> Solution)Can be handled in code.
+
+3)   Not portable
+>>> Solution)USe properties or XML files.
+
+4) password shld not disclosed in code.
+>>> solution)if we need to use the password in code,encrypty the       password and then use.
+     2)Place password in VAULT server or AWS Secrets manager  and       pull password from  there.(prefered).Integrate vault code with JAva       code.
+      3)USe properties file and place your encrypted password in         properties or xml or YAML file.
+
+ 5)driver class,url and passwords should be dynamic.
+>> solution)can be achieved using 4 the step.
+============================================================================
+LOB stands for large objects:
+
+>>  Blob -- binary large  objects --->> Examaple : Audio,images etc.
+>>  CLob ---- Character large object -->> EX. documents..etc
+>>  nclob ---- n no of character large objects.
+
+>>>>>>>>>>>>>>>>>>         SQL is db dependent.   <<<<<<<<<<<<<<<<<
+
+Example : select * from tab; will work on oracle,but the same will not work in mysql.
+------------------------------------------------------------------
+TASK 1: SQL INJECTION  VIDEO --15 min explanantion ,understanding
+
+TASK 2 { 20th submission } :    Wallet  --->> techn.  Jdbc,Servelts.Jsp 
+                specifications ---->> 
+
+                                           interfaces separately ,  classess separately,
+===========================================================================
+
+SQL INJECTION 
+
+fiddle 
+
+SQL,PL/SQL(SQL + Programming concepts),forms and reports.
+>> Callable statements : used for calling Functions/ Stored procedures in databases.
+-------------------------------------------------------------------
+prepare statement :
+
+> This is mainly for inserting values to the queries at run time.
+>> prepare statement helps us to avoid SQL INJECTIONs upto some extent 80%
+>> To use effectly prepared statement , if u follow the standards then sql injection is not possible.
+>> ??? indicates ---placeholder
+------------------------------------------------------------------
+
+TASK 2: 
+Using prepare statement insert single character into employee full name.
+
+i/p -- a
+o/p -- record inserted successfully
+===
+i/p -- abcdd
+o/p --- please provide character.operated failed.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>  oracle ADF ------------servlets are outdated
+>>  image into databases.
+>>  create table imagestab (imagefile,blob);
+>>  using JDBC code ,we should insert file to table.
+>>  Using JDBC code ,we should display file to table
+>> 
+...................
+PreparedStatement ps=con.prepareStatement("insert into imgtable values(?,?)");  
+ps.setString(1,"sonoo");  
+FileInputStream fin=new FileInputStream("d:\\g.jpg");  
+ps.setBinaryStream(2,fin,fin.available());  
+int i=ps.executeUpdate();  
+System.out.println(i+" records affected");
+===================================================================
+seaffonding
+
+>> this is called as seaffonding means process of creating project structure
+____________________________________________________________________________
+============================================================================
+^^^^^^^^^^^^^^^ SERVLETS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+>>  servlets comes under server side technology .servers takes control
+>> javascript comes under client side technology
+>> servlets does not have main method
+>> server two types 1. WEB 2. APPLICATION
+>> Web -->> Tomcat,nqinx,jetty
+>> Application ----->> glassfish,*weblogic,websphere,*pramati(icici/hdfc)
+>> web server has ==>> HTTP engines + catalina (container that runns servlets prgrms) + jasper(container for jsp program) +Middleware servies (min 6)
+
+>>  Application server has ==>> HTTP engines + 
+                                       catalina (container that runns servlets           prgrms) + 
+                                           jasper(container for jsp program) +
+                                       Middleware servies (min 10) +
+                                                      EJB programs                                                                                (container to run EJB COntainer) +
+                                  MQ (message Queue) container (container to run                                               mq programs) 
+
+>> APP srvers are slow but they having more capacity.
+
+>>web Servers are fast but has low capacity
+
+>> middle ware does >> life cycle management
+                                    >>   Connection pooling
+                                    >>   transcation management
+                                   >>     JNDI services
+>> A servlets is a web component which runs on servers
+>> servlets runs on HTTP ver-   1.0, 2.0, 2.1 3.x/HTTPs
+>> HTTP FOR =+ when we deal with normal data which doesnt need security
+>> we deal sensitive data on the HTTPS
+>>  Servlets acts as a front controller in spring ( front runner )
+>>  servlets comes under web category
+>> life cycle stages #3  1. init 
+                                      2. service
+                                     3. destroy
+>> Https webstes needed SSL certificate and it is provided by CA Authority  and it is  provided by PAYTM.GO DADDY, VERISIGN etc,..
+
+>>  two certicficates are provided  ---User defined and vendor provided
+>> Vendor certificate is most secured cerificate
+>> application will be packed in war format
+>> web.XML is a deployemnt descriptor
+>>  web module version 2.5 is used and it uses web.xml 
+					      ! is a  configure file 
+>> web module ver 3.0 is  doesnt need web.xml
+>> For configuration fie we use =====>>  BSON, properties, XML,  JSON, YAML 
+>> XML -----------> JSon------>Bson
+
+>> For server Configuration we use XML,JSOn files

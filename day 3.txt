@@ -1,0 +1,35 @@
+=======================Day 3====================================
+>> 1. Sonar Qube 5.5 v
+its is a code quality testing tool.supports salesforce,java, python ,testing,.net,scalar
+sonar qube available in two flavors 
+1.sonar cloud 
+2. sonar on premisess
+https://www.sonarsource.com/solutions/clean-code/ === sonar website
+
+>>2. pmd
+
+=================================LOOPS IN JAVA=========================
+
+>>Loop is used for doing repeatative actions till the given condition is false
+note== if anything written after continue it will be unreachable 
+
+@@ Task1 == 1a 2b 3c 4d using loops 
+@@ Task2 ==1a 2a 3a 4a
+TASK #4 program to dispaly 24 tables
+TAsk # 3 ==write a java programming to display 1a 2b 3c......Z26
+task 5== explore the memory size of data types in java 
+TASK 6@@ display a number using your number ..int data type
+TAsk 7# do while display 1250 in reverse order.
+
+================================OOPS======================== 
+
+local variables are needed to be intialized 
+
+class level variables are needed to create an object 
+
+============================Static and non static===========================
+
+>> Static will be loaded into nenory first
+>> non static will be loaded last
+>> no need to create object for static and for non static we need to create object
+>> static doesnt know about non static.

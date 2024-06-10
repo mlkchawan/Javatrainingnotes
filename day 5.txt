@@ -1,0 +1,193 @@
+===========================DAY 5=====================================
+
+Package is a collection of classes,interfaces,methods,abstract class,variables
+
+packages are two types 1.user defined 2. pre defined 
+
+>> any package which is a part of JDK is a pre defined package 
+>> any package wich is defined by user himself is called user defined package,
+
+
+>> method with body is called as concrete method
+>> method without body is called abstract methods
+ 
+>> ANy number of objects can be allocted to class
+>> memory will be allocted for an class you create for class
+
+stat ref = new stat();
+
+left =   right
+
+new memory will be allocted by jvm
+
+
+Static object 
+
+===============================================================================================>>
+"""""""""""""""""""CONSTRUCTOR """""""""
+>> a constructor is a function whose name is same as a class name.
+>> constructors are mainly use for intitalizing class level varaiable.
+>> constructor wont returm any value
+>> Constructor will be within class
+>> Constructor is a method
+>> Constructors are of two types 
+        1. parameterized 
+        2. empty constructions
+        3. Default contructor == if an user is not providing any of two constructor,then JVM Will provide default constructor
+
+===============USES OF OBJECT CREATION============================================================
+
+1. unnammed blocks will bw calldd
+2. memory alloction
+3. referenc will be created
+4. class level
+
+>> no 2 constrctors can have same no of parameters of same data types.it will be called duplicate constructor
+
+==================================================================================================================
+Task1:
+create a java program  which class varaiable as int array and display the values in that array using display method
+===================================================================================================================
+
+>>>>>  From JVM prospective ,every java is a thread   <<<<<<<<<<
+
+>>>>>>>>>>>>>>>>>>>>>>>> Over loading and Over riding =====================================
+
+Over loading means same function name with different types and no of paramaters and if possible return type.
+over loading within the class
+
+>> Rules for Method Overloading:
+================================================================================
+>> The overloaded method must change the argument list (number of parameters, data type, or sequence of parameters).
+>> The overloaded method can change the return type.
+>> The overloaded method can change the access modifier (the signature of the function should be different).
+
+============================OVER RIDING=======================================
+
+>>  overriding means same function but between different classes
+
+>> >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ inhereitence
+1. process of hiding the unneccessary data from the user to display onlt the wanted data to the user
+
+Rules for Method Overiding:
+===========================
+>> he argument list should be exactly the same as that of the overridden method.
+>> The return type should be the same or a subtype of the return type declared in the original overridden method in the superclass.
+>> The access level cannot be more restrictive than the overridden method's access level. For example: If the superclass method is declared public then the overriding method in the subclass cannot be either private or protected.
+>> Instance methods can be overridden only if they are inherited by the subclass.
+>> A method declared final cannot be overridden.
+>> A method declared static cannot be overridden but can be re-declared.
+>> If a method cannot be inherited, then it cannot be overridden.
+>> A subclass within the same package as the instance's superclass can override any superclass method that is not declared private or final.
+>> A subclass in a different package can only override the non-final methods declared public or protected.
+>> An overriding method can throw any uncheck exceptions, regardless of whether the overridden method throws exceptions or not. However, the overriding method should not throw checked exceptions that are new or broader than the ones declared by the overridden method. The overriding method can throw narrower or fewer exceptions than the overridden method.
+>> constructors cannot be overridden.
+
+>> any class which is decleared as final then cannot be inherited.
+>> A class can be private only in inner class
+
+=============================================================
+>> parent/super/
+>> in java object is the base class
+
+
+>> A class extends  class
+>> A interface can extends to interface
+<< A Extends
+==============================================================    
+class A1 {                                                           !
+	public static void display() {                               !
+		System.out.println("display method invocated");      !
+	}
+}
+
+ @@@@ multilevel inheritence@@@@@@@@@@@@@@@@@@@2
+
+class B1 extends A1 {
+	public static void display1() {
+		System.out.println("display1 method invocated");
+	}
+}
+
+ 
+
+class C1 extends B1 {
+	public static void display2() {
+		System.out.println("display2 method invocated");
+	}
+}
+
+ 
+
+public class MultiLevelExample {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		B1 obj = new B1();
+		obj.display();
+
+
+	}
+================================================================================
+
+TASK :3:
+
+%% what is diamond problem in java ??
+
+TASK :4:
+%% how to deal with constructors in multi level inheritance ??
+
+super();
+
+addAll() method in collections.
+how do to remove duplicates from arraylist?
+================================================================================
+%%%%%%%%%% collections and ABtract classses %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+>> Abstract class always deals with abstract methods 
+
+>> abstract classes are of two types 1.pure abstract
+                                     2.abstract methods
+1) Pure abstract : has only abstract methods
+2) partially abstract
+
+>>> interface class
+>>> abstract class
+>>> class
+
+========================COLLECTIONS : ============================================
+
+>> collection can a grow and Shrink.
+>>> size is not fixed
+>>> alpha numeric value can be stored
+
+List :
+list is an interface it allows duplicate.
+we can modify it and allows duplicates and also added 
+Arraylist is unsynchronized. 
+iterator is used for display the collection
+
+========================================================================================
+Vector :
+
+it is synchronized = one by one in aline...
+
+===========================SET=====================================
+>> Set dont allows duplicate
+
+1. HAshcode set = no orderng is followed 
+2. TRee set = allows ordering
+
+==========================================================================================
+
+EXception handing :::
+
+>> Any abnormal in the condtional program leads to erros message or termination of program. to deal with 
+this we are going to EXCETPTION HANDLING.
+
+>> SYNTAX:
+
+
+
+<<<<<<<<<<<<<< Checked and UNchecked exceptions >>>>>>>>>>>>>>>>>>>>>>>
+

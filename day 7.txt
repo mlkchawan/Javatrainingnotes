@@ -1,0 +1,93 @@
+1. More practice
+2. Understand 
+3. Analyze
+4. Time management
+5. Follow coding standards
+
+=============================================================================
+>>>>>>>>>>>>>>>>>>>>>  	 JDBC API	====================================
+
+>> Mysql server ------DB
+>> Mysql workbench --------IDE -------Rapid Application development (RAD) tool
+>> From workbench we can also connect to remote databases.
+>> Centralized database/ distributed database
+>> Transcations =====>>> Commit (means success) & Rollback (fails)
+>> FOR API Development and testing their are so many tools.
+>> OPEN API is the most commonly used API
+>> Now postman is also called as OPEN API
+
+>> APP---------------------JDBC API ----------------DB
+
+>> API has 2 level of interface.APPlication layer & DB layer
+>> ODBC is mainly used in MS Office Application
+>> 
+>> Datasource :: Its a origin of the data
+>> Every connection to a database is called as Session.
+>> when logout is done -
+        session will be called as invalidated 
+*******************************************************
+>>>>>>>>>>> Steps inolve in b/w Java app to db <<<<<<<
+
+>> 1.Loading drivers
+>> 2.Estabilishing connection
+>> 3. Creating statements
+>> 4. Executing Queries
+>> 5. handle the result
+>> 6. Close connection
+
+*******************************************************
+
+>> For developer it is a request, but server it is a thread
+
+======== TASK 1 ---Explore Sticky session ========
+___________________________________________________________________________!
+>> Mysql for ---------Learning
+>> Mysql Workbench for projects and development
+>> Alternative tools for the MYsql Workbench Eclipse datasource features,toad for my sql ...etc
+
+>> In java or projects w dont use beta and alpha/snapshot version of  files without team approval
+ >> GA release--General availability files are used
+>>  In projects we will use corporate repositories .IT team will place all dependencies in common corporate repositories
+>>>  Any repository that we create an organization for internal purpose is called common repository .
+
+>>  Tool we are going to use NEXUS SONATYPE/ JFROG repositories  managers
+
+>> IT team will perform Jar scanning.  
+>>  Network that we create for internal purpose of an organization is called as INTRANET.
+
+https://dev.mysql.com/downloads/connector/j/ === to download tools 
+>> MAVEN tool --> depedndency managemnet tool/build tool
+>> GRADLE is s togh compitetor for MAVEN.
+>> MAVEN is inbuilt in ecilpse.
+
+>> PKIX is a issue due to company network issue 	
+
+>> My Sql details =====================
+
+>> Connection metadat of sql server
+
+>>> Driver manager is a class <<<
+
+>>> Interface is not a class <<<
+
+>>> Every service / protocol runs on specific port no.s
+>>>  HTTP -- 8080
+>>>  HTPS ---8443
+>>>  Oracle --- 1521
+>>>> MYSQL ---3306
+
+>>>>>>>>>>>https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.28 >>>>>>>> java package connector .
+
+>>> Resultset is mainly callesd as cursor or it is a contaioner to store the records after executing the sql querty statement.
+
+>>  Pagenation  basically for displaying the records on the page
+>>  Batch is for group records to display at one session
+============================================================================
+> insert 
+> delete -- O/P WILL BE SUCCESS/FAIL
+> update --FOR MODIFYING THE DATA--0/P  WILL (1/0) 
+@ dynamic code is written
+============================================================================
+
+s
+ 

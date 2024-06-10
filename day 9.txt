@@ -1,0 +1,54 @@
+======================       DAY 9     =============================================
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> HTTP SERVLET >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+>> Every server creates servlet configuration object and it is local to its server
+>>  when to use common data between servers servlet context is created and it is global for all servlets .
+
+>> >>>>>>>>>>>>>>>>>>>>>>>>>>    FILTERS  	 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+>> Filters are for transfer function 
+>>if we have group of filters are called filer chain
+>> Sever follows request - response 
+>> A Filter is similar like servlets
+>> Filter are used for security 
+>> TYpes of filters are
+        1. pre filter 
+        2. Post filter
+
+>> Servlets have listener program
+>>  Listerner program should have to be in active action 
+>> if listener program is in inactive mode then servers will be in inactive state
+=================================================================================
+>>  Horizontal Scalling of servers and vertical scaling of server?
+
+>>  Program : Welcome to Infinite using Servlet
+=================================================================================
+>>  Servlets comes under J2EE
+>>  OCWD ---- Oracle Certifified web development
+>> In eclipse we create servelt it will create 2 methods 
+     doget,dopost
+>> HTTP Method
+ GET === doget
+ PUT == doput ====  updating the data 
+ POST == ==creating new data 
+ DELETE == delete the data
+ TRACE == 
+ PATCH === partially modify the data
+
+>>>  Till Tomcat 5.0 version when ever we changes in code ,we need to restart server
+
+>>> doget method is return type is void 
+>>  Any data which you push through get method is called query method.
+>>  Any data which you push through post method is called pay load method.
+>> SendRedirect is for browserer side redirecting 
+>> RequestDispatcher comes under server side redirecting
+
+========================== Servlet config is a data type =========================
+Servlet config if we want add to configguration
+
+=================================================================================
+TASK 
+Write a Servlet program to display records from Employee table using Servletconfig object.
+
+https://www.youtube.com/watch?v=JfAv9XiBoaE
+=================================================================================

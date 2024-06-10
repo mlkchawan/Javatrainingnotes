@@ -1,0 +1,137 @@
+===========Day 4=====================
+
+1 static
+2 public private procted
+3 oops concept
+4 string/string buffers api
+5 Exection handling
+
+>> scanner class provide user to provide input to the program
+
+FOR using Scanner which is predefined we have use import 
+
+and it is used before the class level
+
+>> in java we have 3 modes;
+IN OUT ERROR
+sytem class is a predifined class
+System.out.println() == for output
+System.in ==== for input taking frm user
+System. exit ===
+
+=================================
+
+public static void main(String arg())
+
+command line argumenst for passing values to the main method
+args==== can be used anything 
+void == returns nothing
+static == its a static .it is passd first
+public ===means can be accessed from anywhere (e.railway/airport/bus stop basically used by anyone
+
+===============================
+
+main method is mandatory for desktop applications
+
+server is mandatory for web application
+
+>>Private and Public 
+
+=================================================================================
+%%%%%%%%%%%%%% ARRAYS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@@@@@@@@@@@@@++++++++++++++@@@@@@@@$$$$$$$$$$$$^^^^^^^^^^^&&&&&&&&*****
+
+
+Group of similar datatype in a variable ======= reference data type.
+
+REference data type = Arrays,
+
+Every array will have size 
+we cannot exceed the size
+we cannot store mixed data types i.e, heterogenous (combination af different data types)
+Arrays will have index.
+
+Arraysindexoutof bounds Exception
+we use syntax :
+
+SYNTAX: <datatype> variablename[size];
+
+Arrays size will not be chnaged once assigned
+In array length is a property its not controll
+===========================================================================
+
+String API;
+
+trim()=== to cut down the spaces
+
+substring ====== printing only required characters.
+charAt () ====used to finding out the char at particular place
+
+q.equals(b) ===for comparing two stringss
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+indexof()
+isEmpty()
+
+==============TASK 2 :Display  "i am bad programmer"
+=============== TASK 3 :Returns the Index within in the first occurrence
+
+====================Task 4 : in[3:34 AM] Srinivas (Guest)
+
+
+
+Task2:
+
+ 
+
+Display:  "I am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmerI am bad programmer".
+
+ 
+
+ 
+
+TAsk3:
+Returns the index within this string of the first occurrence.
+Returns the pndex wpthpn thps strpng of the fprst occurrence.
+TAsk4:Returns the index within this string of the first occurrence.
+o/p:
+No of 'i' letters: 6
+
+No of 'r' letters: 
+
+No of 'o' letters:
+
+=================================================================================
+For loop is a advanced versionof your while and do while 
+ 
+
+=============================
+Arguments 2 types 
+1. used for passing values to main method
+2. vm used for passing value to Vm.ex: heap area memory;
+
+=================================================================
+SWITCH :::
+
+is also a conditoinal statements .it consists of multiple cases
+and every case will have a break
+ SYNTAX::
+ Switch (condition)
+case a: //statement
+case b: // statement
+case c // statement
+==============================================================================
+
+OOPS 
+
+>> Object allocted memory in heap memory
+
+> object
+> class
+> abstractrion
+> encapsulation
+> polymorphism 
+> inherietence
+> message passing
+
+

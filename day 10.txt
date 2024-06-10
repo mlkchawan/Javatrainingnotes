@@ -1,0 +1,93 @@
+====================== DAY 10  ============================================================
+
+>>  1)Check your web.xml file for syntax issues and servlet names and url patterns are matching.
+>> 2)Metadata is case sensitive.
+>> 3)Format your code or web.xml when needed.
+>> 4)If more no of apps are deployed to server,better to clean your tomcat directories more frequently.
+>> 5)Stop your server before you shutdown your machine.
+port conflict issues.
+>> 6)Check all your servlets and jsp metadata properly in code and web.xml.
+>> 7)Always Servlets shld be resided in packages.Dont use default packages.
+>> 8)Html and jsp file shld reside in Webcontent folder or
+create a folder in webcontent and place your files there.We always developers to create folders separetly
+for html,css,js,jsp,image and fonts.
+>>  9)Even after performing above steps,if you are still facing issues,pls restart your IDE.
+===========================================================================================
+
+>> Java Bean/pojo
+       POJO -->> it is also called as playing old java object .A pojo class is a class which follows   
+ >>   Below rules.  <<
+------>> NO main method
+------>> pojo classes should be in different package
+------>> class should be public 
+------->> always variables should be private .Cannot be public
+------->> Methods should be public
+------->> for every variable we should have setter and getter
+------->> pojo class shouldnot  implement interface
+------->> pojo class extend only one package
+------->> NO abstract methods are allowed 
+------->> dont write data base code in pojo class 
+------->> We can have user defined methods with little logics
+
+                                                                 DAO
+=============>>                                 DATA ACCESS OBJECT                                  =========>>> 
+>> this layer is in the backend. it is a design pattern. 
+-->database connection with helper method ( connection object is portable)
+-> create
+-> update
+-> delete
+-> select
+-> select all
+-> insert all
+==>> All methods should be public
+==>> Package name start with com. < company>\org\project>. module name
+============================================================================================
+     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<     JSP    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+============================================================================================
+                                            TASK 3
+>>>> ADHOC =====     Sending SMS/email from Java App .
+=> Test main
+============================================================================================
+TASK 1 
+
+>>  Display current date using java  
+>> Timestamp = combination of date and Time 
+>> explore date class in sql package and util package
+>> Display current day and current month using date class.
+>> display current day day in week and current month using data class
+>> Display italy country date and time 
+>> write a program to find difference between 2 dates in days and minutes
+============================================================================================ 
+TASK 2
+
+>> input should be 1,23456 output should be like : one lakh twenty three thousand four hunderd fifty six only.
+>> i/p = 123456         -------------         o/p = 1,23,456
+
+>> optional :    Display random number using Java.
+Rule: Shld not use Random class.
+
+                      Secure Random class ---salt,seed
+
+>>  we will ask you to insereted into the backend,  
+============================================================================================
+
+////////////////////////                   SESSION MANAGEMENT         ////////////////////////////
+
+>> In web sessions play important role for conversaion role for converation 2 parties 1!.e,client and server
+>> Any adta we perform management using below wsys
+
+
+>> in Java - 
+
+============================================================================================
+
+//////////////////////////////////   JSP  /////////////////////////////////////////////////////////////
+
+>> For initialization == JSP init
+
+>> JspService (
+
+>>> In JSP we should focus on types of tags .
+>>> We are having HTTP expresion language
+>>> Inlude will be helpful in Tiles concept in web page development.but it is static 
+>>  Explore all tags 
