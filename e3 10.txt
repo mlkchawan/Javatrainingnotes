@@ -1,0 +1,353 @@
+<html>    index
+<Style> 
+body {font-size:20px; text-align:Center;} 
+</Style>
+<body>
+    <form action="Loginn" method="post">  
+    <pre>
+    UserName:<input type="text" name="username"/>
+    <br/>  
+    Password:<input type="password" name="password"/>
+    <br/>  
+    <input type="submit" value="login"/>  
+    </pre>
+    </form>
+  </body>
+</html>
+===================welcome
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<Style> 
+body {font-size:40px; text-align:Center;} 
+</Style>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<pre>
+Welcome to <%= request.getParameter("username") %>
+</pre>
+</body>
+</html>
+=============================
+package com.infinite.login;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Loginn {
+	Connection con = null;
+
+	@RequestMapping("/")
+	public String display() {
+		System.out.println("chawan");
+		return "index";
+	}
+
+	@RequestMapping("/Loginn")
+	public String login(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/training", "root", "mysql123@");
+			String user = request.getParameter("username");
+			String pass = request.getParameter("password");
+			PreparedStatement ps = con.prepareStatement("select * from login where user=?");
+			/* PreparedStatement ps=con.prepareStatement("Insert into login values(?,?)");
+			 ps.setString(1, request.getParameter("username"));
+			 ps.setString(2,request.getParameter("password"));
+			 ps.executeUpdate();
+			 return "Login1";}*/
+			// ps.close();
+			ps.setString(1, user);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()){
+			if(rs.getString(1).equals(user)){
+				if(rs.getString(2).equals(pass)){	
+					return "Login1";
+				}
+				else{
+					return "invalid";
+				}
+			}
+				else{
+					return "invalid";
+				}
+			}
+		}
+		catch(SQLException e){
+			System.out.println(e);
+		}
+		catch(Exception e1){
+			System.out.println(e1);
+		}
+		return "invalid";			
+	}
+}
+================================
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	<!-- Provide support for component scanning -->
+	<context:component-scan base-package="com.infinite.login" />
+	<!--Provide support for conversion, formatting and validation -->
+	<mvc:annotation-driven />
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/pages1/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+		<property name="order" value="1" />
+	</bean>
+</beans>
+=======================================
+
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+<servlet>  
+    <servlet-name>spring</servlet-name>  
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
+    <load-on-startup>1</load-on-startup>    
+</servlet>
+<servlet-mapping>  
+    <servlet-name>spring</servlet-name>  
+    <url-pattern>/</url-pattern>  
+</servlet-mapping> 
+</web-app>
+
+======================
+
+//log4j.appender.FILE.File=${log}/log.out
+log4j.rootLogger=DEBUG,FILE,console
+// Set the appender named X to be a File appender
+log4j.appender.FILE=org.apache.log4j.FileAppender
+log4j.appender.FILE.File=D:\\logs\\jbackend.log
+//log4j.appender.FILE.File=${log}/log.out
+log4j.appender.file.MaxFileSize=1MB
+log4j.appender.file.MaxBackupIndex=1
+// Define the layout for X appender
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.conversionPattern=%L %d [%t] %-5p %c %x - %m%n
+
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=%L %d [%t] %-5p %c %x - %m%n
+
+=========================
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<context:annotation-config />
+
+	<bean id="custAddress1" class="com.infinite.maven1.DateExample">
+
+		<property name="name" value="chawan" />
+		<property name="city" value="Chennai" />
+		<property name="date" value="27/10/2023" />
+	</bean>
+	<bean id="const" class="com.infinite.maven1.ConstructorEx">
+
+		<constructor-arg name="fullname" value="chawan" />
+		<constructor-arg name="id" value="27" />
+
+	</bean>
+	<bean id="const2" class="com.infinite.maven1.ConstructorEx">
+
+		<constructor-arg name="fullname" value="chawan" />
+		<constructor-arg name="id" value="27" />
+		<constructor-arg name="y" value="2007" />
+
+	</bean>
+	<bean id="const1" class="com.infinite.maven1.ConstructorEx" scope ="singleton" init-method="beaninit" destroy-method="beandestroy">
+		<constructor-arg index="0" value="27" />
+		<constructor-arg index="1" value="chawan" />
+		<constructor-arg index="2" value="2001" />
+		</bean>
+    </beans>
+=========================
+package com.infinite.maven1;
+
+public class ConstructorEx {
+	private String fullname;
+	private int id;
+	private int y;
+
+	public void beaninit() {
+		System.out.println("bean called init method");
+	}
+
+	public void beandestroy() {
+		System.out.println("bean destroyed");
+	}
+
+	ConstructorEx() {
+	}
+
+	ConstructorEx(int id, String fullname) {
+		this.fullname = fullname;
+		this.id = id;
+	}
+
+	ConstructorEx(int id, String fullname, int y) {
+		this.fullname = fullname;
+		this.id = id;
+		this.y = y;
+	}
+
+	public String displayName() {
+		return (fullname + id);
+	}
+
+	public String display() {
+		return (fullname + id + y);
+	}
+
+	public String display1() {
+		return (fullname + id + y);
+	}
+
+}
+========================================
+
+package com.infinite.maven1;
+
+ 
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+ 
+
+public class ConstructorTest {
+
+ 
+
+	public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			AbstractApplicationContext context = new ClassPathXmlApplicationContext("Sample.xml");
+			ConstructorEx customer = (ConstructorEx) context.getBean("const");
+			ConstructorEx customer1 = (ConstructorEx) context.getBean("const1");
+			ConstructorEx customer2 = (ConstructorEx) context.getBean("const2");
+
+			System.out.println(customer.displayName());
+			System.out.println(customer1.display());
+			System.out.println(customer2.display1());
+			context.registerShutdownHook();
+		}
+	}
+===================================
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<context:annotation-config />
+
+	<bean id="custAddress1" class="com.infinite.maven1.DateExample">
+
+		<property name="name" value="chawan" />
+		<property name="city" value="Chennai" />
+		<property name="date" value="27/10/2023" />
+	</bean>
+	<bean id="const" class="com.infinite.maven1.ConstructorEx">
+
+		<constructor-arg name="fullname" value="chawan" />
+		<constructor-arg name="id" value="27" />
+
+	</bean>
+	<bean id="const2" class="com.infinite.maven1.ConstructorEx">
+
+		<constructor-arg name="fullname" value="chawan" />
+		<constructor-arg name="id" value="27" />
+		<constructor-arg name="y" value="2007" />
+
+	</bean>
+	<bean id="const1" class="com.infinite.maven1.ConstructorEx" scope ="singleton" init-method="beaninit" destroy-method="beandestroy">
+		<constructor-arg index="0" value="27" />
+		<constructor-arg index="1" value="chawan" />
+		<constructor-arg index="2" value="2001" />
+		</bean>
+    </beans>
+
+
+
+=======================================
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.infinite.webex</groupId>
+  <artifactId>LoginMvc1</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>LoginMvc1 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.7</version>
+</dependency>
+  <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>5.1.1.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jasper -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jasper</artifactId>
+			<version>9.0.12</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>3.0-alpha-1</version>
+		</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>LoginMvc1</finalName>
+  </build>
+</project>

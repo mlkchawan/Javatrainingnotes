@@ -1,0 +1,178 @@
+class calculator{
+constructor(){
+console.log("invoked abcd1");
+}
+abcd(){
+console.log("invoked 2nd time");
+}
+}
+class child extends calculator
+{
+display()
+}
+console.log("invoked child");
+}
+}
+
+var g=new child();
+g.abcd();
+g.display():
+
+
+=============
+
+class calculator{
+constructor(a){
+console.log("invoked abcd1");
+}
+static abcd(){
+console.log("invoked 2nd time");
+}
+}
+class child extends calculator
+{
+display()
+{
+console.log("invoked child");
+}
+}
+var g=new child();
+g.abcd();
+g.display();
+
+===========
+
+class Calculator
+{
+constructor(a)
+{
+console.log("Empty Constructor invoked"+a);
+}
+display()
+{
+console.log("display invoked");
+}
+ 
+abcd()
+{
+console.log('abcd invoked from parent');
+}
+abcd(a)
+{
+console.log('abcd paarmeterised invoked');
+}
+ 
+}
+class Child extends Calculator
+{
+display()
+{
+console.log("display invoked from Child");
+}
+display()
+{
+console.log('display invoked from child');
+}
+}
+var obj = new Calculator();
+obj.display();
+=======================STRing trim ===== here trim do the  job of removing spaces in whole string
+
+var a ='chawan mlk       98     ';
+console.log(a);
+console.log(a.trim());
+======================string concat
+var a ='chawan mlk       98     ';
+var b='laxmikanth';
+console.log(a.concat(b));
+===================   string trimStrart  ====removes only beggining side spaces not ending side(if available)
+var a ='    chawan mlk       98     ';
+
+console.log(a.trimStart());
+
+========================trimEnd ========removes only end side spaces 
+var a ='    chawan mlk       98     ';
+
+console.log(a.trimEnd());
+
+==========================  String.prototype.valueOf()   --to find the value of string
+var as =new String('aoiuyt');
+console.log(as);
+==
+var as =new String('aoiuyt');
+console.log(as);
+console.log(as.valueOf());
+
+============================ String to convert to UPPERCASE
+var a ="abcdefght";
+console.log(a.toUpperCase());
+
+===================  string to convert to Lowercase
+var a ="ABCuEFGHT";
+console.log(a.toLowerCase());
+
+=============================== string charAt index
+
+const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+const index = 4;
+
+console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+// Expected output: "The character at index 4 is q"
+
+=================  string ENDS AND STRTS
+
+var a="we are good bad boys";
+var b=7;
+
+console.log(a.endsWith('boys'));
+console.log(a.startsWith('we'));
+================================== Match string  g--means global search (whole strings searches  {upper and lower char checks})
+
+var a="we are good bad boysGHGGTXX -90987654re";
+var b=/[a-z,A-Z,1-9,@]/g;
+console.log(a.match(b));
+
+
+============================Match string  gi--means global search ignorance (whole strings searches  {dont care about upper and lower char .checks})
+var a="we are good bad boysGHGGTXX -90987654re";
+var b=/[a-z,A-Z,1-9,@]/gi;
+console.log(a.match(b));
+================================replace a string 
+var a="we are good very bad bad boys";
+
+console.log(a.replace('very','wanted'));
+
+===============================  JSON.parse string ::
+const a='{"chawan":"mlk", "nithin": "kumar"}';
+const b =JSON.parse(a);
+console.log(b.chawan);
+
+=======================================
+
+let a={
+"chawan":"mlk",
+"address":"hyd",
+"age":23};
+
+console.log(a.chawan);
+alert(a.age);
+
+=============================   Arrow functions:
+
+var a=["edwsa",5,5,67654,4,"chawan"];
+console.log(a.map((a)=>a.length));
+--------------------------------------------------------
+======     Set in JS
+
+
+var a =new Set();
+a.add(45);
+a.add(89);
+a.add("chawan");
+console.log(a.values());
+
+================================
+
+
+

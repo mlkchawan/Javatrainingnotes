@@ -1,0 +1,279 @@
+  package com.infinite.dao;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.transaction.PlatformTransactionManager;
+
+import com.infinite.helper.EmployeeRowMapper;
+import com.infinite.interfaces.IEmployeeDao;
+import com.infinite.pojo.Employee;
+
+/**
+ * @author laxmikanthm
+ * This class is for Dao Implementation class 
+ *
+ */
+public class EmployeeDaoImpl implements IEmployeeDao{
+	private DataSource dataSource =null;
+	private JdbcTemplate jdbcTemplate =null;
+	private PlatformTransactionManager transactionManager=null;
+	
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+		jdbcTemplate=new JdbcTemplate(dataSource);
+		}
+
+	public void setTransactionManager(
+			PlatformTransactionManager transactionManager) {
+		this.transactionManager = transactionManager;
+	}
+	
+	public void createTable() {
+		// TODO Auto-generated method stub
+		String sql="create table employee (empid int primary key "
+				+ "auto_increment,firstname varchar(25),"
+				+ "lastname varchar(25),salary numeric(8,2))";
+		jdbcTemplate.execute(sql);
+		System.out.println("you are at createtable");
+	}
+
+	public void insertEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		String sql="insert into employee(firstname,lastname,salary) "
+				+ "values (?,?,?)";
+		//var...args
+		jdbcTemplate.update(sql, employee.getFirstname(), 
+				employee.getLastname(), employee.getSalary());
+		//System.out.println("Record Inserted.");
+		System.out.println("you are at insert");
+
+	}
+
+	public void deleteEmployee(int employeeId) {
+		// TODO Auto-generated method stub
+		
+		String sql = "delete from employee where empid = ?";
+		int c=jdbcTemplate.update(sql,new Object[] {employeeId});
+		if(c==0)
+		System.out.println("delete action done");
+		//return employee;
+		else 
+			System.out.println("not deleted");
+	}
+
+	public List<Employee> getAllEmployees() {
+		// TODO Auto-generated method stub
+			String sql="select * from employee";
+			List<Employee> employee=jdbcTemplate.query(sql, 
+					new EmployeeRowMapper(),new Object[] {});
+			System.out.println("Showing all Employees");
+			return employee;
+	}
+	public String findEmployeeName(int empId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Employee findEmployee(int empId) {
+		// TODO Auto-generated method stub
+		System.out.println("you are at findemployee");
+		return null;
+	}
+
+	public int countEmployees() {
+		// TODO Auto-generated method stub
+		System.out.println("you are at countemploye");
+
+		return 0;
+	}
+
+	public void addbonus(Employee employee, int experience) {
+		// TODO Auto-generated method stub
+		System.out.println("you are at add bonus");
+	}
+	
+
+}
+=================================================================================
+ package com.infinite.helper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.infinite.pojo.Employee;
+
+public class EmployeeRowMapper implements RowMapper<Employee>{
+
+	public Employee mapRow(ResultSet rs, int count) throws SQLException {
+		Employee employee=new Employee();
+		employee.setEmpId(rs.getInt("empid"));
+		employee.setFirstname(rs.getString("firstname"));
+		employee.setLastname(rs.getString("lastname"));
+		employee.setSalary(rs.getDouble("salary"));
+		return employee;
+	}
+
+ 
+
+}
+=================================================================================
+package com.infinite.interfaces;
+
+import java.util.List;
+
+import com.infinite.pojo.Employee;
+
+public interface IEmployeeDao {
+	public void createTable();
+
+	public void insertEmployee(Employee employee);
+
+	public void deleteEmployee(int employeeId);
+
+	public List<Employee> getAllEmployees();
+
+	public String findEmployeeName(int empId);
+
+	public Employee findEmployee(int empId);
+
+	public int countEmployees();
+
+//	public String callProcedure(int empid);
+
+	public void addbonus(Employee employee, int experience);
+
+}
+==================================================================================
+package com.infinite.main;
+
+import java.util.Iterator;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.infinite.dao.EmployeeDaoImpl;
+import com.infinite.pojo.Employee;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext context=new ClassPathXmlApplicationContext("JdbcBeans.xml");
+		EmployeeDaoImpl daoImpl=(EmployeeDaoImpl)context.getBean("empDaoImpl");
+		//daoImpl.createTable();
+		Employee employee=new Employee();
+		employee.setFirstname("Kamal");
+		employee.setLastname("Emi");
+		employee.setSalary(2300);
+		Employee employee2=new Employee("chawan", "Jack",27000);
+		//daoImpl.insertEmployee(employee);
+		daoImpl.insertEmployee(employee2);
+		//daoImpl.createTable();
+		//daoImpl.deleteEmployee(19);
+		//Iterator <Employee> it=daoImpl.getAllEmployees().iterator();
+		//while (it.hasNext()){
+		//	System.out.println(it.next().getFirstname());
+			
+		}
+	}
+
+
+==================================================================================
+package com.infinite.pojo;
+
+public class Employee {
+	private int empId;
+	private String firstname;
+	private String lastname;
+	private double salary;
+
+	public Employee() {
+		
+	}
+
+	public Employee(String firstname, String lastname, double salary) {
+
+		// super();
+
+		this.firstname = firstname;
+
+		this.lastname = lastname;
+
+		this.salary = salary;
+
+	}
+
+	public Employee(int empId, String firstname, String lastname, double salary) {
+
+		// super();
+
+		this.empId = empId;
+
+		this.firstname = firstname;
+
+		this.lastname = lastname;
+
+		this.salary = salary;
+
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+}
+==================================================================================
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+<property name="url" value="jdbc:mysql://localhost:3306/training"/>
+<property name="username" value="root"/>
+<property name="password" value="mysql123@"/>
+</bean>
+<bean id="empDaoImpl" class="com.infinite.dao.EmployeeDaoImpl">
+	<property name="dataSource" ref="dataSource"/>
+	<property name="transactionManager" ref="transactionManager"/>
+</bean>
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+<property name="dataSource" ref="dataSource"/>
+</bean>
+</beans>

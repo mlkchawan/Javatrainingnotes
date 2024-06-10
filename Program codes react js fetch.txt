@@ -1,0 +1,58 @@
+
+ 		FETCHING DATA FROM DB USING REACT JS
+
+
+
+import React from 'react';
+import axios from 'axios';
+ 
+export default class Axiexample extends React.Component {
+ 
+    state = {
+        persons: []
+    }
+ 
+ 
+ 
+    componentDidMount() {
+        axios.get('https://jsonplaceholder.typicode.com/db')
+            .then(res => {
+                const persons = res.data;
+                console.log(this.state.persons)
+                this.setState({ persons: persons.posts });
+            })
+    }
+ 
+    render() {
+        return ( <div>
+          <h1>Employee Table</h1>
+          <table border={"black"}>
+              <thead>
+                  <tr>
+                      <th> Employee Id</th>
+                      
+                  </tr>
+
+              </thead>
+              <tbody>
+                  {
+                       this.state.persons
+                       .map(person =>
+                              <tr key={person.id}>
+                                  <td>Title:{person.title}</td>
+                                  <td>Body:{person.body}</td>
+                                  
+                              </tr>
+                      )
+                  }
+              </tbody>
+
+          </table>
+
+      </div>
+           
+ 
+        )
+    }
+}
+================================

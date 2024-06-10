@@ -1,0 +1,16 @@
+//log4j.appender.FILE.File=${log}/log.out
+log4j.rootLogger=DEBUG,FILE,console
+// Set the appender named X to be a File appender
+log4j.appender.FILE=org.apache.log4j.FileAppender
+log4j.appender.FILE.File=D:\\logs\\jbackend.log
+//log4j.appender.FILE.File=${log}/log.out
+log4j.appender.file.MaxFileSize=1MB
+log4j.appender.file.MaxBackupIndex=1
+// Define the layout for X appender
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.conversionPattern=%m%n
+
+
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=[%t] %-5p %c %x - %m%n

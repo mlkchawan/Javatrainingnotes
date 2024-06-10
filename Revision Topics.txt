@@ -1,0 +1,106 @@
+		  REVISION TOPICS 
+
+
+Swagger ------->>   tool gives us tool to test restfull service and it gives too to design document for restfull services .
+
+Swagger is part of OPEN API . we can design Api specifications 
+
+Design ----->> what should be the response what should be the schema what fields are to be inserted and mapping parameters 
+
+OPEN API had given Code
+
+=======================================================
+
+		SWAGGER
+                             ~~~~~~~~~~~~~~~~~
+
+1. Add a Swagger to your dependency 
+
+2. @Scrollable ------->> Top to bottom or bottom to top in the result set is called Scrollable 
+
+3. Updatable --------->> Modification inthe result set will hav to directly modify in the orignal Db then it is done by updateable 
+
+=======================================================
+		EXCEPTION
+
+>> 2 Types of Exception 
+
+1, compile time Exception 
+2. Run time Exception
+
+
+Syntacs Error 
+
+Semantics Error 
+
+Predefined tensions 
+
+Class 120 Exception extendsnExceptions
+{
+120 Exceprtion
+
+f20
+
+
+
+try{
+}
+catch ()
+{
+finally
+======>>IN TRY BLOCK WE ARE GOIMG TO  try for nec mdl maveen
+
+i Want to throw thgroughs exception 
+1. throw ----throw new
+abdc()throws arthmetic Exception
+
+{
+
+}
+=======================================================
+
+		HTTP SESSION
+
+
+>> Web Application uses http protocols
+
+>> Session means connection b/w to DB etc
+
+>> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

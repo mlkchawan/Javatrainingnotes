@@ -1,0 +1,844 @@
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.34 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use training;
+Database changed
+mysql> select* from room;
++--------+-----+------+------+
+| name   | age | id   | city |
++--------+-----+------+------+
+| hero   |  19 | 8051 | hyd  |
+| sai    |  19 | 8053 | hyd  |
+| chawan |  19 | 8054 | mbnr |
++--------+-----+------+------+
+3 rows in set (0.00 sec)
+
+mysql> select *from room where in id='8053';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in id='8053'' at line 1
+mysql> select *from room where in( id=8053);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in( id=8053)' at line 1
+mysql> select *from room where in id 8054;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in id 8054' at line 1
+mysql> select *from room where in id (8051,8054);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in id (8051,8054)' at line 1
+mysql> select *from room where id in (8051,8054);
++--------+-----+------+------+
+| name   | age | id   | city |
++--------+-----+------+------+
+| hero   |  19 | 8051 | hyd  |
+| chawan |  19 | 8054 | mbnr |
++--------+-----+------+------+
+2 rows in set (0.01 sec)
+
+mysql> select *from room where id in 8051;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8051' at line 1
+mysql> select *from room where id in (8051);
++------+-----+------+------+
+| name | age | id   | city |
++------+-----+------+------+
+| hero |  19 | 8051 | hyd  |
++------+-----+------+------+
+1 row in set (0.00 sec)
+
+mysql> select *from room where idnot in (8051);
+ERROR 1054 (42S22): Unknown column 'idnot' in 'where clause'
+mysql> select *from room where id not in (8051);
++--------+-----+------+------+
+| name   | age | id   | city |
++--------+-----+------+------+
+| sai    |  19 | 8053 | hyd  |
+| chawan |  19 | 8054 | mbnr |
++--------+-----+------+------+
+2 rows in set (0.00 sec)
+
+mysql> select *from room where name not in (hero);
+ERROR 1054 (42S22): Unknown column 'hero' in 'where clause'
+mysql> select *from room where hero not in (name);
+ERROR 1054 (42S22): Unknown column 'hero' in 'where clause'
+mysql> select *from room ;
++--------+-----+------+------+
+| name   | age | id   | city |
++--------+-----+------+------+
+| hero   |  19 | 8051 | hyd  |
+| sai    |  19 | 8053 | hyd  |
+| chawan |  19 | 8054 | mbnr |
++--------+-----+------+------+
+3 rows in set (0.00 sec)
+
+mysql> select *from room where name in ('chawan');
++--------+-----+------+------+
+| name   | age | id   | city |
++--------+-----+------+------+
+| chawan |  19 | 8054 | mbnr |
++--------+-----+------+------+
+1 row in set (0.00 sec)
+
+mysql> select *from room where name  not in ('chawan');
++------+-----+------+------+
+| name | age | id   | city |
++------+-----+------+------+
+| hero |  19 | 8051 | hyd  |
+| sai  |  19 | 8053 | hyd  |
++------+-----+------+------+
+2 rows in set (0.00 sec)
+
+mysql> insert into room values ('mlk',20,689,'chennai');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into room values ('anil',22,989,'chennai');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> alter table room add date;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> alter table room add date char(20);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select *from room ;
++--------+-----+------+---------+------+
+| name   | age | id   | city    | date |
++--------+-----+------+---------+------+
+| mlk    |  20 |  689 | chennai | NULL |
+| anil   |  22 |  989 | chennai | NULL |
+| hero   |  19 | 8051 | hyd     | NULL |
+| sai    |  19 | 8053 | hyd     | NULL |
+| chawan |  19 | 8054 | mbnr    | NULL |
++--------+-----+------+---------+------+
+5 rows in set (0.00 sec)
+
+mysql> alter table room delete date;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'delete date' at line 1
+mysql> alter table room delete date char(20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'delete date char(20)' at line 1
+mysql> alter table room drop date char(20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'char(20)' at line 1
+mysql> alter table room drop date;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table room add doj Date;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select *from room ;
++--------+-----+------+---------+------+
+| name   | age | id   | city    | doj  |
++--------+-----+------+---------+------+
+| mlk    |  20 |  689 | chennai | NULL |
+| anil   |  22 |  989 | chennai | NULL |
+| hero   |  19 | 8051 | hyd     | NULL |
+| sai    |  19 | 8053 | hyd     | NULL |
+| chawan |  19 | 8054 | mbnr    | NULL |
++--------+-----+------+---------+------+
+5 rows in set (0.00 sec)
+
+mysql> insert into room values ('anil',22,989,'chennai','2023/10/23');
+ERROR 1062 (23000): Duplicate entry '989' for key 'room.id'
+mysql> insert into room values ('anil',22,9669,'chennai','2023/10/23');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select *from room ;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+6 rows in set (0.00 sec)
+
+mysql> insert into room values ('anil',22,589,'chennai','2023/10/23');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> alter table room drop where name='anil';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where name='anil'' at line 1
+mysql> alter table room drop where name in 'anil';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where name in 'anil'' at line 1
+mysql> delete from table where id='9669';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table where id='9669'' at line 1
+mysql> delete from table where id='9669';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table where id='9669'' at line 1
+mysql> delete from table where id=9669;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table where id=9669' at line 1
+mysql> select *from room ;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+7 rows in set (0.00 sec)
+
+mysql> select * from room where id between 20 and 22;
+Empty set (0.00 sec)
+
+mysql> select *from room ;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+7 rows in set (0.00 sec)
+
+mysql> select * from room where age between 20 and 22;
++------+-----+------+---------+------------+
+| name | age | id   | city    | doj        |
++------+-----+------+---------+------------+
+| anil |  22 |  589 | chennai | 2023-10-23 |
+| mlk  |  20 |  689 | chennai | NULL       |
+| anil |  22 |  989 | chennai | NULL       |
+| anil |  22 | 9669 | chennai | 2023-10-23 |
++------+-----+------+---------+------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from room where age not between 20 and 22;
++--------+-----+------+------+------+
+| name   | age | id   | city | doj  |
++--------+-----+------+------+------+
+| hero   |  19 | 8051 | hyd  | NULL |
+| sai    |  19 | 8053 | hyd  | NULL |
+| chawan |  19 | 8054 | mbnr | NULL |
++--------+-----+------+------+------+
+3 rows in set (0.00 sec)
+
+mysql> select * from room where name between 'sai' and 'hero';
+Empty set (0.00 sec)
+
+mysql> select * from room where name between 'hero' and 'sai';
++------+-----+------+---------+------+
+| name | age | id   | city    | doj  |
++------+-----+------+---------+------+
+| mlk  |  20 |  689 | chennai | NULL |
+| hero |  19 | 8051 | hyd     | NULL |
+| sai  |  19 | 8053 | hyd     | NULL |
++------+-----+------+---------+------+
+3 rows in set (0.00 sec)
+
+mysql> select * from room where name like 'c%';
++--------+-----+------+------+------+
+| name   | age | id   | city | doj  |
++--------+-----+------+------+------+
+| chawan |  19 | 8054 | mbnr | NULL |
++--------+-----+------+------+------+
+1 row in set (0.00 sec)
+
+mysql> select * from room where name like 'c%' and 's%';
+Empty set, 1 warning (0.01 sec)
+
+mysql> select * from room where name like '__a%';
++--------+-----+------+------+------+
+| name   | age | id   | city | doj  |
++--------+-----+------+------+------+
+| chawan |  19 | 8054 | mbnr | NULL |
++--------+-----+------+------+------+
+1 row in set (0.00 sec)
+
+mysql> select * from room where name like 'h%_r_';
++------+-----+------+------+------+
+| name | age | id   | city | doj  |
++------+-----+------+------+------+
+| hero |  19 | 8051 | hyd  | NULL |
++------+-----+------+------+------+
+1 row in set (0.00 sec)
+
+mysql>  select* from room where name not like'c%';
++------+-----+------+---------+------------+
+| name | age | id   | city    | doj        |
++------+-----+------+---------+------------+
+| anil |  22 |  589 | chennai | 2023-10-23 |
+| mlk  |  20 |  689 | chennai | NULL       |
+| anil |  22 |  989 | chennai | NULL       |
+| hero |  19 | 8051 | hyd     | NULL       |
+| sai  |  19 | 8053 | hyd     | NULL       |
+| anil |  22 | 9669 | chennai | 2023-10-23 |
++------+-----+------+---------+------------+
+6 rows in set (0.00 sec)
+
+mysql>  select* from room where name  like'c%n';
++--------+-----+------+------+------+
+| name   | age | id   | city | doj  |
++--------+-----+------+------+------+
+| chawan |  19 | 8054 | mbnr | NULL |
++--------+-----+------+------+------+
+1 row in set (0.00 sec)
+
+mysql>  select* from room where name regexp 'wan';
++--------+-----+------+------+------+
+| name   | age | id   | city | doj  |
++--------+-----+------+------+------+
+| chawan |  19 | 8054 | mbnr | NULL |
++--------+-----+------+------+------+
+1 row in set (0.05 sec)
+
+mysql>  select* from room where name regexp '^an';
++------+-----+------+---------+------------+
+| name | age | id   | city    | doj        |
++------+-----+------+---------+------------+
+| anil |  22 |  589 | chennai | 2023-10-23 |
+| anil |  22 |  989 | chennai | NULL       |
+| anil |  22 | 9669 | chennai | 2023-10-23 |
++------+-----+------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql>  select* from room where name regexp 'an$';
++--------+-----+------+------+------+
+| name   | age | id   | city | doj  |
++--------+-----+------+------+------+
+| chawan |  19 | 8054 | mbnr | NULL |
++--------+-----+------+------+------+
+1 row in set (0.00 sec)
+
+mysql>  select* from room where name regexp 'an'|'il'|'ro;
+    '> ;
+    '> ;;
+    '> ;
+    '> ,li;
+    '> xext;
+    '>  select* from room where name regexp 'an$';
+    '>  select* from room where name regexp 'an'|'il'|'ro;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'an$';
+ select* from room where name regexp 'an'|'il'|'ro' at line 7
+mysql>  select* from room where name regexp 'an'|'il'|'ro';
+Empty set, 3 warnings (0.02 sec)
+
+mysql>  select* from room where name regexp 'an|il|ro';
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| anil   |  22 |  989 | chennai | NULL       |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+5 rows in set (0.00 sec)
+
+mysql> select count(*) from room;
++----------+
+| count(*) |
++----------+
+|        7 |
++----------+
+1 row in set (0.03 sec)
+
+mysql> select distinct count(*) from room;
++----------+
+| count(*) |
++----------+
+|        7 |
++----------+
+1 row in set (0.00 sec)
+
+mysql>  select* from room where name regexp [im];
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[im]' at line 1
+mysql>  select* from room where name regexp [im];
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[im]' at line 1
+mysql>  select* from room where name regexp '[im]';
++------+-----+------+---------+------------+
+| name | age | id   | city    | doj        |
++------+-----+------+---------+------------+
+| anil |  22 |  589 | chennai | 2023-10-23 |
+| mlk  |  20 |  689 | chennai | NULL       |
+| anil |  22 |  989 | chennai | NULL       |
+| sai  |  19 | 8053 | hyd     | NULL       |
+| anil |  22 | 9669 | chennai | 2023-10-23 |
++------+-----+------+---------+------------+
+5 rows in set (0.00 sec)
+
+mysql>  select* from room where name regexp '[im]l';
++------+-----+------+---------+------------+
+| name | age | id   | city    | doj        |
++------+-----+------+---------+------------+
+| anil |  22 |  589 | chennai | 2023-10-23 |
+| mlk  |  20 |  689 | chennai | NULL       |
+| anil |  22 |  989 | chennai | NULL       |
+| anil |  22 | 9669 | chennai | 2023-10-23 |
++------+-----+------+---------+------------+
+4 rows in set (0.00 sec)
+
+mysql>  select* from room where name regexp '[im]c';
+Empty set (0.00 sec)
+
+mysql>
+========================================================================================================================================================================================
+28/09/2023::
+
+
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.34 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use training;
+Database changed
+mysql> select * from room;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+7 rows in set (0.05 sec)
+
+mysql> select* from room orderby asc;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asc' at line 1
+mysql> select* from room name  order by asc;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asc' at line 1
+mysql> select* from room order by name asc;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| anil   |  22 |  989 | chennai | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| mlk    |  20 |  689 | chennai | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
++--------+-----+------+---------+------------+
+7 rows in set (0.03 sec)
+
+mysql> select* from room order by name age city asc;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'age city asc' at line 1
+mysql> select* from room order by name, age, city asc;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| anil   |  22 |  989 | chennai | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| mlk    |  20 |  689 | chennai | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
++--------+-----+------+---------+------------+
+7 rows in set (0.02 sec)
+
+
++------+-----+------+---------+------------+
+| name | age | id   | city    | doj        |
++------+-----+------+---------+------------+
+| anil |  22 |  589 | chennai | 2023-10-23 |
+| anil |  22 |  989 | chennai | NULL       |
+| anil |  22 | 9669 | chennai | 2023-10-23 |
++------+-----+------+---------+------------+
+3 rows in set (0.03 sec)
+
+mysql> select* from room where id='589' order by name;
++------+-----+-----+---------+------------+
+| name | age | id  | city    | doj        |
++------+-----+-----+---------+------------+
+| anil |  22 | 589 | chennai | 2023-10-23 |
++------+-----+-----+---------+------------+
+1 row in set (0.03 sec)
+
+mysql> select* from room orderby city;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'city' at line 1
+mysql> select* from room order by city;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  19 | 8054 | mbnr    | NULL       |
++--------+-----+------+---------+------------+
+7 rows in set (0.00 sec)
+
+
+mysql> insert into room values('chawan',23,7896,'america','2023/12/12');
+Query OK, 1 row affected, 1 warning (0.05 sec)
+
+mysql> select * from room;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| chawan |  23 | 7896 | america | 2023-12-12 |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+8 rows in set (0.00 sec)
+
+mysql> select distinct  city from room;
++---------+
+| city    |
++---------+
+| chennai |
+| america |
+| hyd     |
+| mbnr    |
++---------+
+4 rows in set (0.03 sec)
+
+mysql> select * from room where name is not null;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| chawan |  23 | 7896 | america | 2023-12-12 |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+8 rows in set (0.02 sec)
+
+mysql> select * from room limit 2;
++------+-----+-----+---------+------------+
+| name | age | id  | city    | doj        |
++------+-----+-----+---------+------------+
+| anil |  22 | 589 | chennai | 2023-10-23 |
+| mlk  |  20 | 689 | chennai | NULL       |
++------+-----+-----+---------+------------+
+2 rows in set (0.00 sec)
+
+
+mysql> select * from room where name='anil' order by name limit 2;
++------+-----+-----+---------+------------+
+| name | age | id  | city    | doj        |
++------+-----+-----+---------+------------+
+| anil |  22 | 589 | chennai | 2023-10-23 |
+| anil |  22 | 989 | chennai | NULL       |
++------+-----+-----+---------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select* from room offset3,3;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3' at line 1
+mysql> select* from room offset 3,3;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,3' at line 1
+mysql> select* from room limit 3,3;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| chawan |  23 | 7896 | america | 2023-12-12 |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
++--------+-----+------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql>  aggregrate function;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'aggregrate function' at line 1
+mysql> select * from room max(id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'max(id)' at line 1
+mysql> select max(id) from room;
++---------+
+| max(id) |
++---------+
+|    9669 |
++---------+
+1 row in set (0.03 sec)
+
+mysql> select sum from room;
+ERROR 1054 (42S22): Unknown column 'sum' in 'field list'
+mysql> select sum(id) from room;
++---------+
+| sum(id) |
++---------+
+|   43990 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select avg(id) from room;
++-----------+
+| avg(id)   |
++-----------+
+| 5498.7500 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql>
+
+=====================================3/10/2023
+
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 45
+Server version: 8.0.34 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use training;
+Database changed
+mysql> select * from room;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| chawan |  23 | 7896 | america | 2023-12-12 |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+8 rows in set (0.00 sec)
+
+mysql> select * from room limit 3;
++------+-----+-----+---------+------------+
+| name | age | id  | city    | doj        |
++------+-----+-----+---------+------------+
+| anil |  22 | 589 | chennai | 2023-10-23 |
+| mlk  |  20 | 689 | chennai | NULL       |
+| anil |  22 | 989 | chennai | NULL       |
++------+-----+-----+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from room where city='hyd' limit 3;
++------+-----+------+------+------+
+| name | age | id   | city | doj  |
++------+-----+------+------+------+
+| hero |  19 | 8051 | hyd  | NULL |
+| sai  |  19 | 8053 | hyd  | NULL |
++------+-----+------+------+------+
+2 rows in set (0.00 sec)
+
+mysql> select * from room where city='chennai' limit 3;
++------+-----+-----+---------+------------+
+| name | age | id  | city    | doj        |
++------+-----+-----+---------+------------+
+| anil |  22 | 589 | chennai | 2023-10-23 |
+| mlk  |  20 | 689 | chennai | NULL       |
+| anil |  22 | 989 | chennai | NULL       |
++------+-----+-----+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from room where city='chennai' order by name limit 3;
++------+-----+------+---------+------------+
+| name | age | id   | city    | doj        |
++------+-----+------+---------+------------+
+| anil |  22 |  589 | chennai | 2023-10-23 |
+| anil |  22 |  989 | chennai | NULL       |
+| anil |  22 | 9669 | chennai | 2023-10-23 |
++------+-----+------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from room limit3, 3;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3' at line 1
+mysql> select * from room limit 3, 3;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| chawan |  23 | 7896 | america | 2023-12-12 |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
++--------+-----+------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from room limit 0, 3;
++------+-----+-----+---------+------------+
+| name | age | id  | city    | doj        |
++------+-----+-----+---------+------------+
+| anil |  22 | 589 | chennai | 2023-10-23 |
+| mlk  |  20 | 689 | chennai | NULL       |
+| anil |  22 | 989 | chennai | NULL       |
++------+-----+-----+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select distinct city from room;
++---------+
+| city    |
++---------+
+| chennai |
+| america |
+| hyd     |
+| mbnr    |
++---------+
+4 rows in set (0.00 sec)
+
+mysql> select max(id) from room;
++---------+
+| max(id) |
++---------+
+|    9669 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select max(id) as id from room;
++------+
+| id   |
++------+
+| 9669 |
++------+
+1 row in set (0.00 sec)
+
+mysql> select max(id) as chawan from room;
++--------+
+| chawan |
++--------+
+|   9669 |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select min(id) as chawan from room;
++--------+
+| chawan |
++--------+
+|    589 |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select avg(id) as chawan from room;
++-----------+
+| chawan    |
++-----------+
+| 5498.7500 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> select * from room;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| chawan |  23 | 7896 | america | 2023-12-12 |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  19 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+8 rows in set (0.00 sec)
+
+mysql> select avg(age) as chawan from room;
++---------+
+| chawan  |
++---------+
+| 20.7500 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select max(age) as chawan from room;
++--------+
+| chawan |
++--------+
+|     23 |
++--------+
+1 row in set (0.00 sec)
+
+mysql> update room set age=25 where name='chawan';
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> update room set age=25 where name='chawan'and id=8054;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> select * from room;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| chawan |  25 | 7896 | america | 2023-12-12 |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  25 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+8 rows in set (0.00 sec)
+
+mysql> update room set age=24 where name='chawan'and id=8054;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from room;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| chawan |  25 | 7896 | america | 2023-12-12 |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  24 | 8054 | mbnr    | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+8 rows in set (0.00 sec)
+
+mysql> update room set age=25,city=delhi where name='chawan'and id=8054;
+ERROR 1054 (42S22): Unknown column 'delhi' in 'field list'
+mysql> update room set age=25,city='delhi' where name='chawan'and id=8054;
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from room;
++--------+-----+------+---------+------------+
+| name   | age | id   | city    | doj        |
++--------+-----+------+---------+------------+
+| anil   |  22 |  589 | chennai | 2023-10-23 |
+| mlk    |  20 |  689 | chennai | NULL       |
+| anil   |  22 |  989 | chennai | NULL       |
+| chawan |  25 | 7896 | america | 2023-12-12 |
+| hero   |  19 | 8051 | hyd     | NULL       |
+| sai    |  19 | 8053 | hyd     | NULL       |
+| chawan |  25 | 8054 | delhi   | NULL       |
+| anil   |  22 | 9669 | chennai | 2023-10-23 |
++--------+-----+------+---------+------------+
+8 rows in set (0.00 sec)
+
+mysql>
+==================================================================================
+10/6/2023
+==================================================================================
+
+
+>> foreign key is to link the table with other table
+
+

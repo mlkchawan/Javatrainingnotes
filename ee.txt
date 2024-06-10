@@ -1,0 +1,262 @@
+application properties:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.16</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.h2</groupId>
+	<artifactId>H2DataBase</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>H2DataBase</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.26</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.bytebuddy</groupId>
+			<artifactId>byte-buddy</artifactId>
+			<version>1.12.23</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+===
+
+#spring.datasource.url=jdbc:h2:mem:training
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.datasource.username=sa
+#spring.datasource.password=password
+#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+#enabling the H2 console  
+#spring.h2.console.enabled=true
+spring.datasource.url=jdbc:mysql://localhost:3306/tutorialdb
+spring.datasource.username=root
+spring.datasource.password=mysql123@
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.generate-ddl=true
+spring.jpa.show-sql=true
+
+
+endpoints.health.id=health
+endpoints.health.sensitive=true
+endpoints.health.enabled=true
+ 
+management.port=8081
+management.context-path=/details
+management.security.enabled=true
+ 
+security.basic.enabled=true
+security.user.name=admin
+security.user.password=admin
+ 
+endpoints.metrics.id=metrics
+endpoints.metrics.sensitive=true
+endpoints.metrics.enabled=true
+ 
+endpoints.server.id=server
+endpoints.server.sensitive=false
+endpoints.server.enabled=true
+ 
+endpoints.info.id=info
+endpoints.info.sensitive=false
+endpoints.info.enabled=true
+info.app.name=Spring Actuator Example
+info.app.description=Spring Actu
+======
+
+package com.infinite.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.infinite.model.Employee;
+import com.infinite.service.EmployeeService;
+@RestController
+@RequestMapping(value = "/api")
+public class EmployeeController {
+		@Autowired
+		EmployeeService employeeService;
+		@RequestMapping(value="/employees", method=RequestMethod.POST)
+		public Employee createEmployee(@RequestBody Employee emp) {
+			System.out.println("creation of table employee ");
+		    return employeeService.createEmployee(emp);
+		}
+		@RequestMapping(value = "/reademployees", method = RequestMethod.GET)
+		public List<Employee> readEmployees() {
+			System.out.println("read of table employee ");
+			return employeeService.getEmployees();
+		}
+		@RequestMapping(value = "/reademployees/{id}", method = RequestMethod.GET)
+		public Employee readEmployeesid(@PathVariable int id) {
+			System.out.println("read of table emplo ");
+			 Employee emp=employeeService.findById(id);
+				System.out.println("read of table yee ");
+			 return emp;
+		}
+		@RequestMapping(value = "/deleteemployees/{id}", method = RequestMethod.DELETE)
+		public Employee deleteEmployeesid(@PathVariable int id) {
+			 Employee emp=employeeService.findById(id);
+			 employeeService.deleteEmployee(emp);
+				return emp;
+		}
+		@PutMapping("/update/{id}")
+		public Employee updateemp(@PathVariable Integer id, @RequestBody Employee empDetail) {
+	          Employee  emp = employeeService.findById(id);
+				emp.setFname(empDetail.getFname());
+				emp.setLname(empDetail.getLname());
+				emp.setEmailId(empDetail.getEmailId());
+				employeeService.createEmployee(emp);
+			    return emp;
+		}
+}
+======
+package com.infinite.model;
+
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="emp")
+public class Employee {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="EmpId")
+	private int empid;
+	@Column(name="FirstName")
+	private String fname;
+	@Column(name="LastName")
+	private String lname;
+	@Column(name="Email_Id")
+	private String emailId;
+	public int getEmpid() {
+		return empid;
+	}
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+	public String getFname() {
+		return fname;
+	}
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	public String getEmailId() {
+		return emailId;
+	}
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+}
+=======
+package com.infinite.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.infinite.model.Employee;
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee,Integer>{
+	
+
+}
+========
+
+package com.infinite.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.infinite.model.Employee;
+import com.infinite.repository.EmployeeRepository;
+
+@Service
+public class EmployeeService {
+	@Autowired
+	EmployeeRepository empRepository;
+
+	// CREATE
+	public Employee createEmployee(Employee emp) {
+		return empRepository.save(emp);
+	}
+
+	// READ
+	public List<Employee> getEmployees() {
+		return empRepository.findAll();
+	}
+	public Employee findById(Integer id) {
+	Optional<Employee> userResult =empRepository.findById(id);
+	Employee emp = null;
+	if(userResult.isPresent())
+	{
+		emp= userResult.get();
+	}
+	return emp;
+	}
+	public void deleteEmployee(Employee emp) {
+		empRepository.delete(emp);
+	}
+}
